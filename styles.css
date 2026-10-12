@@ -372,15 +372,8 @@ a {
 
 /* About */
 
-.about {
-  display: grid;
-  grid-template-columns: 470fr 670fr;
-  column-gap: var(--gap);
-  align-items: center;
-}
-
 .about__copy {
-  padding-left: 70px;
+  max-width: 770px;
 }
 
 .about__copy p {
@@ -389,7 +382,7 @@ a {
   line-height: 34px;
 }
 
-.band .about__copy p {
+.band .about__copy p:not(.about__signoff) {
   color: var(--navy);
 }
 
@@ -550,7 +543,6 @@ a {
 
   .hero__grid,
   .split,
-  .about,
   .cta__grid,
   .topics,
   .steps,
@@ -625,14 +617,6 @@ a {
   .topic h3 {
     font-size: 22px;
     line-height: 28px;
-  }
-
-  .about {
-    row-gap: 40px;
-  }
-
-  .about__copy {
-    padding-left: 0;
   }
 
   .about__copy p {
