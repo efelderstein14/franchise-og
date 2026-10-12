@@ -121,6 +121,18 @@ a {
   outline-color: var(--brass);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: absolute;
   left: 16px;
@@ -275,6 +287,7 @@ a {
 }
 
 .stat__num {
+  font-variant-numeric: tabular-nums;
   font-family: var(--font-display);
   font-size: 56px;
   font-weight: 700;
