@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Franchise OG | Free intro call about franchising</title>
-  <meta name="description" content="Thinking about owning a franchise or becoming a franchise broker? Book a free 30-minute call with the industry veteran who helped build the franchise brokerage space.">
-  <meta property="og:title" content="Thinking about franchising? Talk to the OG first.">
+  <title>The Franchise OG | Free intro call about becoming a franchise broker</title>
+  <meta name="description" content="Thinking about becoming a franchise broker? Book a free 30-minute call with the industry veteran who helped build the franchise brokerage space.">
+  <meta property="og:title" content="Thinking about becoming a franchise broker? Talk to the OG first.">
   <meta property="og:description" content="A free 30-minute call with a 25-year franchise veteran. Straight answers, no pitch.">
   <meta property="og:image" content="images/og-headshot.jpg">
-  <meta name="theme-color" content="#F4EFE6">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <meta name="theme-color" content="#0f1a3d">
+  <link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/michroma.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,22 +18,21 @@
 
   <header class="masthead">
     <div class="wrap masthead__inner">
-      <a class="wordmark" href="#main" aria-label="The Franchise OG, back to top">The Franchise <em>OG</em></a>
-      <a class="btn btn--small" data-booking href="#">Book a free call</a>
+      <a class="wordmark" href="#main" aria-label="The Franchise OG, back to top">The Franchise OG</a>
+      <a class="pusher pusher--small" data-booking href="#">Book a free call</a>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
+    <!-- Hero: the dial -->
+    <section class="hero dial-ground" aria-labelledby="hero-title">
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <p class="eyebrow">Free 30-minute intro call</p>
-          <h1 id="hero-title">Thinking about franchising? <em>Talk to the OG first.</em></h1>
-          <p class="hero__lede">Whether you want to own a franchise or become a franchise broker, get 30 minutes with someone who helped build the franchise brokerage industry. You get straight answers and no pitch, before you spend a cent.</p>
+          <h1 id="hero-title">Thinking about becoming a franchise broker? <span class="gilt">Talk to the OG first.</span></h1>
+          <p class="hero__lede">Get 30 minutes with someone who helped build the franchise brokerage industry. Straight answers and no pitch, before you join a network or spend a cent.</p>
           <div class="hero__actions">
-            <a class="btn" data-booking href="#">Book your free intro call</a>
-            <ul class="assurances" aria-label="About the call">
+            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Book your free intro call</a>
+            <ul class="terms" aria-label="About the call">
               <li>Free</li>
               <li>30 minutes</li>
               <li>Phone or video</li>
@@ -43,101 +41,168 @@
           </div>
         </div>
 
-        <figure class="hero__photo">
-          <img src="images/og-headshot.jpg" alt="The Franchise OG buttoning a navy suit jacket, gold watch on his wrist" width="940" height="1175" fetchpriority="high">
-          <figcaption class="hero__tag">
-            <span class="hero__tag-kicker">Over 25 years ago</span>
-            <span>Launched one of the first franchise brokerages in the nation.</span>
-          </figcaption>
-        </figure>
-      </div>
+        <div class="hero__dial">
+          <svg class="dial" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="face" cx="50%" cy="42%" r="62%">
+                <stop offset="0" stop-color="#26408f"/>
+                <stop offset="0.55" stop-color="#172a66"/>
+                <stop offset="1" stop-color="#0c1638"/>
+              </radialGradient>
+              <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f6dfa0"/>
+                <stop offset="0.45" stop-color="#d9b25e"/>
+                <stop offset="1" stop-color="#9c7630"/>
+              </linearGradient>
+              <radialGradient id="subFace" cx="50%" cy="40%" r="70%">
+                <stop offset="0" stop-color="#1d3478"/>
+                <stop offset="1" stop-color="#0f1c48"/>
+              </radialGradient>
+            </defs>
 
-      <div class="wrap">
-        <dl class="proof">
-          <div class="proof__item"><dt>Years in franchising</dt><dd>25+</dd></div>
-          <div class="proof__item"><dt>Candidates placed</dt><dd>500+</dd></div>
-          <div class="proof__item"><dt>Brokers mentored</dt><dd>1,000+</dd></div>
-        </dl>
+            <!-- case rim and dial face -->
+            <circle cx="500" cy="500" r="496" fill="url(#goldMetal)"/>
+            <circle cx="500" cy="500" r="478" fill="#0b1433"/>
+            <circle cx="500" cy="500" r="472" fill="url(#face)"/>
+            <circle cx="500" cy="500" r="236" fill="none" stroke="#ffffff" stroke-opacity=".035" stroke-width="472" stroke-dasharray="2.0594 2.0594"/>
+
+            <!-- minute track: fifths, then minutes -->
+            <circle cx="500" cy="500" r="452" fill="none" stroke="#c9d3ee" stroke-opacity=".55" stroke-width="12" stroke-dasharray="1.4 8.06665"/>
+            <circle cx="500" cy="500" r="452" fill="none" stroke="#e8edf9" stroke-width="22" stroke-dasharray="3 44.33333" stroke-dashoffset="1.5" transform="rotate(-90 500 500)"/>
+
+            <!-- applied gold batons (3, 6 and 9 give way to the registers) -->
+            <g fill="url(#goldMetal)">
+              <rect x="482" y="60" width="13" height="78" rx="2"/>
+              <rect x="505" y="60" width="13" height="78" rx="2"/>
+              <g id="baton"><rect x="493" y="60" width="14" height="66" rx="2"/></g>
+              <use href="#baton" transform="rotate(30 500 500)"/>
+              <use href="#baton" transform="rotate(60 500 500)"/>
+              <use href="#baton" transform="rotate(120 500 500)"/>
+              <use href="#baton" transform="rotate(150 500 500)"/>
+              <use href="#baton" transform="rotate(210 500 500)"/>
+              <use href="#baton" transform="rotate(240 500 500)"/>
+              <use href="#baton" transform="rotate(300 500 500)"/>
+              <use href="#baton" transform="rotate(330 500 500)"/>
+            </g>
+
+            <!-- dial printing -->
+            <text class="dial__brand" x="500" y="208" text-anchor="middle">THE FRANCHISE OG</text>
+            <text class="dial__print" x="500" y="242" text-anchor="middle">INTRO CALL · 30 MIN</text>
+            <text class="dial__print" x="500" y="868" text-anchor="middle">PHONE OR VIDEO</text>
+
+            <!-- register: years (9 o'clock) -->
+            <g class="reg" transform="translate(272 500)">
+              <circle r="128" fill="url(#subFace)" stroke="url(#goldMetal)" stroke-width="3"/>
+              <circle r="112" fill="none" stroke="#c9d3ee" stroke-opacity=".7" stroke-width="10" stroke-dasharray="1.6 21.8574"/>
+              <text class="reg__value" y="58" text-anchor="middle" data-count="25">25+</text>
+              <text class="reg__label" y="-56" text-anchor="middle">YEARS</text>
+              <g class="hand" style="--a: 300deg"><path d="M-4 18 L-2 -100 L2 -100 L4 18 Z" fill="url(#goldMetal)"/></g>
+              <circle r="9" fill="url(#goldMetal)"/>
+            </g>
+
+            <!-- register: candidates placed (3 o'clock) -->
+            <g class="reg" transform="translate(728 500)">
+              <circle r="128" fill="url(#subFace)" stroke="url(#goldMetal)" stroke-width="3"/>
+              <circle r="112" fill="none" stroke="#c9d3ee" stroke-opacity=".7" stroke-width="10" stroke-dasharray="1.6 21.8574"/>
+              <text class="reg__value" y="58" text-anchor="middle" data-count="500">500+</text>
+              <text class="reg__label" y="-56" text-anchor="middle">PLACED</text>
+              <g class="hand" style="--a: 300deg"><path d="M-4 18 L-2 -100 L2 -100 L4 18 Z" fill="url(#goldMetal)"/></g>
+              <circle r="9" fill="url(#goldMetal)"/>
+            </g>
+
+            <!-- register: brokers mentored (6 o'clock) -->
+            <g class="reg" transform="translate(500 716)">
+              <circle r="128" fill="url(#subFace)" stroke="url(#goldMetal)" stroke-width="3"/>
+              <circle r="112" fill="none" stroke="#c9d3ee" stroke-opacity=".7" stroke-width="10" stroke-dasharray="1.6 21.8574"/>
+              <text class="reg__value" y="58" text-anchor="middle" data-count="1000">1,000+</text>
+              <text class="reg__label" y="-56" text-anchor="middle">MENTORED</text>
+              <g class="hand" style="--a: 300deg"><path d="M-4 18 L-2 -100 L2 -100 L4 18 Z" fill="url(#goldMetal)"/></g>
+              <circle r="9" fill="url(#goldMetal)"/>
+            </g>
+
+            <!-- hour and minute hands at ten past ten -->
+            <g fill="url(#goldMetal)">
+              <path d="M500 500 m-15 0 L493 262 L500 236 L507 262 L515 500 Z" transform="rotate(-60 500 500)"/>
+              <path d="M500 500 m-12 0 L494 118 L500 92 L506 118 L512 500 Z" transform="rotate(48 500 500)"/>
+            </g>
+            <!-- running chronograph seconds hand -->
+            <g class="sweep">
+              <rect x="497.5" y="70" width="5" height="520" rx="2" fill="#f2d68f"/>
+              <circle cx="500" cy="600" r="14" fill="#f2d68f"/>
+            </g>
+            <circle cx="500" cy="500" r="20" fill="url(#goldMetal)"/>
+            <circle cx="500" cy="500" r="7" fill="#0b1433"/>
+          </svg>
+
+          <dl class="registers">
+            <div><dt>Years in franchising</dt><dd>25+</dd></div>
+            <div><dt>Candidates placed</dt><dd>500+</dd></div>
+            <div><dt>Brokers mentored</dt><dd>1,000+</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
 
-    <!-- Two doors -->
-    <section class="section" aria-labelledby="doors-title">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="eyebrow">Two reasons people call</p>
-          <h2 id="doors-title">Which one sounds like you?</h2>
+    <!-- The broker path -->
+    <section class="section opaline" aria-labelledby="fit-title">
+      <div class="wrap fit">
+        <div class="fit__head">
+          <h2 id="fit-title">Wondering if brokering is your next move?</h2>
+          <p class="fit__intro">You are an executive, a sales pro or a consultant who wants work you own. In 30 minutes, we will talk through:</p>
         </div>
-
-        <div class="doors">
-          <article class="door" aria-labelledby="door-own">
-            <p class="door__num">01</p>
-            <h3 id="door-own">&ldquo;I want to own a franchise.&rdquo;</h3>
-            <p class="door__intro">You want to be your own boss without starting from scratch. We will talk through:</p>
-            <ul class="ticks">
-              <li>Whether ownership fits your goals, money and lifestyle</li>
-              <li>How to tell a strong brand from a slick sales deck</li>
-              <li>What it really costs to open, and how long until it pays</li>
-              <li>The questions to ask before you sign anything</li>
-            </ul>
-            <a class="door__link" data-booking data-interest="Owning a franchise" href="#">Talk about owning a franchise <span aria-hidden="true">&rarr;</span></a>
-          </article>
-
-          <article class="door" aria-labelledby="door-broker">
-            <p class="door__num">02</p>
-            <h3 id="door-broker">&ldquo;I want to become a franchise broker.&rdquo;</h3>
-            <p class="door__intro">You are an executive, a sales pro or a consultant who wants work you own. We will talk through:</p>
-            <ul class="ticks">
-              <li>Whether this work fits you. Often the honest answer is &ldquo;not yet&rdquo;</li>
-              <li>How brokers find good candidates without buying junk leads</li>
-              <li>Who pays brokers, when and why</li>
-              <li>How the major broker networks differ, and what to ask before you join</li>
-            </ul>
-            <a class="door__link" data-booking data-interest="Becoming a franchise broker" href="#">Talk about becoming a broker <span aria-hidden="true">&rarr;</span></a>
-          </article>
+        <ol class="indices">
+          <li><span class="indices__mark" aria-hidden="true"></span>Whether this work fits you. Often the honest answer is &ldquo;not yet&rdquo;</li>
+          <li><span class="indices__mark" aria-hidden="true"></span>How brokers find good candidates without buying junk leads</li>
+          <li><span class="indices__mark" aria-hidden="true"></span>Who pays brokers, when and why</li>
+          <li><span class="indices__mark" aria-hidden="true"></span>How the major broker networks differ, and what to ask before you join</li>
+        </ol>
+        <div class="fit__foot">
+          <a class="pusher pusher--navy" data-booking data-interest="Becoming a franchise broker" href="#">Talk about becoming a broker</a>
+          <p>Not sure yet? That is the best time to call.</p>
         </div>
-
-        <p class="doors__note">Not sure yet? That is the best time to call.</p>
       </div>
     </section>
 
     <!-- Why me -->
-    <section class="section section--ink" aria-labelledby="why-title">
-      <div class="wrap why">
-        <p class="eyebrow eyebrow--light">Why talk to me first</p>
-        <h2 id="why-title" class="why__quote">&ldquo;I have seen every kind of deal. My job is to help you spot a good one, and to walk away from a bad one.&rdquo;</h2>
-        <div class="why__body">
-          <p>Over 25 years ago, I launched one of the first franchise brokerages in the nation. Since then, I have placed hundreds of candidates with the right franchise and mentored thousands of franchise brokers.</p>
-          <p>Today I help executives and professionals find the right way into franchising, as an owner or as a broker. Nobody should make a decision this big on a sales call. That is why the first conversation with me is free.</p>
-          <p class="why__sign">The Franchise OG</p>
+    <section class="section why dial-ground dial-ground--quiet" aria-labelledby="why-title">
+      <div class="wrap why__grid">
+        <figure class="why__photo">
+          <img src="images/og-headshot.jpg" alt="The Franchise OG buttoning a navy suit jacket, gold watch on his wrist" width="940" height="1175" loading="lazy">
+          <span class="loupe" aria-hidden="true"></span>
+          <figcaption>Over 25 years ago, he launched one of the first franchise brokerages in the nation.</figcaption>
+        </figure>
+        <div class="why__copy">
+          <h2 id="why-title" class="why__quote">&ldquo;I have seen every kind of deal. My job is to help you spot a good one, and to walk away from a bad one.&rdquo;</h2>
+          <div class="why__body">
+            <p>Over 25 years ago, I launched one of the first franchise brokerages in the nation. Since then, I have placed more than 500 candidates with the right franchise and mentored more than 1,000 franchise brokers.</p>
+            <p>Today I help executives and professionals decide whether brokering is their way into franchising. Nobody should make a decision this big on a sales call. That is why the first conversation with me is free.</p>
+            <p class="why__sign">The Franchise OG</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Is / isn't -->
-    <section class="section" aria-labelledby="ledger-title">
+    <section class="section opaline" aria-labelledby="ledger-title">
       <div class="wrap">
-        <div class="section__head">
-          <p class="eyebrow">No surprises</p>
-          <h2 id="ledger-title">What this call is, and what it isn&rsquo;t.</h2>
-        </div>
+        <h2 id="ledger-title" class="section__title">What this call is, and what it isn&rsquo;t.</h2>
         <div class="ledger">
           <div class="ledger__col">
             <h3>It is</h3>
             <ul>
-              <li>A real conversation where you ask the questions</li>
-              <li>Honest answers, even when they are &ldquo;not yet&rdquo;</li>
-              <li>A clear next step, whatever you decide</li>
-              <li>Useful even if you never call me again</li>
+              <li><svg class="mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>A real conversation where you ask the questions</li>
+              <li><svg class="mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Honest answers, even when they are &ldquo;not yet&rdquo;</li>
+              <li><svg class="mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>A clear next step, whatever you decide</li>
+              <li><svg class="mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Useful even if you never call me again</li>
             </ul>
           </div>
           <div class="ledger__col ledger__col--not">
             <h3>It isn&rsquo;t</h3>
             <ul>
-              <li>A sales pitch for one particular brand</li>
-              <li>A commitment of any kind</li>
-              <li>A franchise offer or a contract</li>
-              <li>A test you have to be ready for</li>
+              <li><svg class="mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg>A sales pitch for one particular network</li>
+              <li><svg class="mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg>A commitment of any kind</li>
+              <li><svg class="mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg>A franchise offer or a contract</li>
+              <li><svg class="mark" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg>A test you have to be ready for</li>
             </ul>
           </div>
         </div>
@@ -145,25 +210,22 @@
     </section>
 
     <!-- Steps -->
-    <section class="section section--tint" aria-labelledby="steps-title">
+    <section class="section dial-ground dial-ground--quiet" aria-labelledby="steps-title">
       <div class="wrap">
-        <div class="section__head">
-          <p class="eyebrow">How it works</p>
-          <h2 id="steps-title">Three steps. No pressure at any of them.</h2>
-        </div>
-        <ol class="steps">
-          <li class="step">
-            <span class="step__num" aria-hidden="true">1</span>
+        <h2 id="steps-title" class="section__title">Three steps. No pressure at any of them.</h2>
+        <ol class="track">
+          <li class="track__step">
+            <span class="track__num" aria-hidden="true">1</span>
             <h3>Pick a time</h3>
-            <p>Choose a slot that suits you. Tell me a little about your background and what draws you to franchising.</p>
+            <p>Choose a slot that suits you. Tell me a little about your background and what draws you to franchise brokering.</p>
           </li>
-          <li class="step">
-            <span class="step__num" aria-hidden="true">2</span>
+          <li class="track__step">
+            <span class="track__num" aria-hidden="true">2</span>
             <h3>Talk for 30 minutes</h3>
             <p>By phone or video. You ask, I answer straight. Bring every question you have been googling.</p>
           </li>
-          <li class="step">
-            <span class="step__num" aria-hidden="true">3</span>
+          <li class="track__step">
+            <span class="track__num" aria-hidden="true">3</span>
             <h3>Leave with a plan</h3>
             <p>You will know your next move: go deeper, wait, or walk away. All three are good outcomes.</p>
           </li>
@@ -172,12 +234,9 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section" aria-labelledby="faq-title">
+    <section class="section opaline" aria-labelledby="faq-title">
       <div class="wrap faq">
-        <div class="section__head faq__head">
-          <p class="eyebrow">Questions</p>
-          <h2 id="faq-title">What people ask me before they book.</h2>
-        </div>
+        <h2 id="faq-title" class="section__title">What people ask me before they book.</h2>
         <div class="faq__list">
           <details>
             <summary>Is the call really free?</summary>
@@ -188,28 +247,45 @@
             <p>No. Most people I talk to are early. That is the best time to call, before you sign with anyone or spend money on anything.</p>
           </details>
           <details>
-            <summary>Do I need franchise or business experience?</summary>
-            <p>No. Most franchise owners have never run one before, and many good brokers came from corporate sales, HR or consulting. What you bring matters more than what you know today.</p>
+            <summary>Do I need franchise experience?</summary>
+            <p>No. Many good brokers came from corporate sales, HR or consulting. What you bring matters more than what you know today.</p>
           </details>
           <details>
-            <summary>Will you push me toward a particular franchise?</summary>
-            <p>No. I will explain exactly how brokers get paid so you know where everyone stands. If franchising is wrong for you right now, I will tell you.</p>
+            <summary>Will you push me to join a particular network?</summary>
+            <p>No. I will explain how the major networks differ and exactly how brokers get paid, so you know where everyone stands. If brokering is wrong for you right now, I will tell you.</p>
           </details>
           <details>
             <summary>What should I bring?</summary>
-            <p>Your background, what draws you to franchising, and any brands or broker networks you are already looking at. That is plenty.</p>
+            <p>Your background, what draws you to brokering, and any broker networks you are already looking at. That is plenty.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="closer" aria-labelledby="closer-title">
+    <!-- Final CTA: start the counter -->
+    <section class="closer dial-ground" aria-labelledby="closer-title">
       <div class="wrap closer__inner">
-        <h2 id="closer-title">Find out if franchising fits you, <em>before you commit to anything.</em></h2>
-        <div class="closer__actions">
-          <a class="btn btn--light" data-booking href="#">Book your free intro call</a>
-          <p>Free &middot; 30 minutes &middot; No obligation</p>
+        <h2 id="closer-title">Find out if brokering fits you, <span class="gilt">before you commit to anything.</span></h2>
+        <div class="closer__counter">
+          <svg class="counter" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+            <circle cx="200" cy="200" r="196" fill="#d9b25e"/>
+            <circle cx="200" cy="200" r="186" fill="#0f1c48"/>
+            <circle cx="200" cy="200" r="166" fill="none" stroke="#c9d3ee" stroke-opacity=".6" stroke-width="16" stroke-dasharray="2 32.7575" transform="rotate(-90.35 200 200)"/>
+            <circle cx="200" cy="200" r="160" fill="none" stroke="#f2d68f" stroke-width="28" stroke-dasharray="4 163.552" transform="rotate(-90.7 200 200)"/>
+            <text x="302" y="268" text-anchor="middle" class="counter__num">10</text>
+            <text x="98" y="268" text-anchor="middle" class="counter__num">20</text>
+            <text x="200" y="300" text-anchor="middle" class="counter__label">MINUTES</text>
+            <g class="counter__hand"><path d="M195 228 L198 66 L202 66 L205 228 Z" fill="#f2d68f"/></g>
+            <circle cx="200" cy="200" r="13" fill="#f2d68f"/>
+          </svg>
+          <div class="closer__actions">
+            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Book your free intro call</a>
+            <ul class="terms" aria-label="About the call">
+              <li>Free</li>
+              <li>30 minutes</li>
+              <li>No obligation</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -218,7 +294,7 @@
   <footer class="footer">
     <div class="wrap">
       <div class="footer__top">
-        <span class="wordmark">The Franchise <em>OG</em></span>
+        <span class="wordmark">The Franchise OG</span>
         <nav class="footer__links" aria-label="Legal">
           <a href="/privacy">Privacy policy</a>
           <a href="/terms">Terms</a>
@@ -243,6 +319,31 @@
       if (a.dataset.interest) url.searchParams.set("a1", a.dataset.interest);
       a.href = url.toString();
     });
+
+    // Wind the dial: register hands sweep to their readings while the figures count up.
+    // Everything already shows its final reading; this only animates toward it.
+    const dial = document.querySelector(".dial");
+    if (dial && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const values = dial.querySelectorAll("[data-count]");
+      const finals = [...values].map((t) => t.textContent);
+      dial.classList.add("is-winding");
+      values.forEach((t) => (t.textContent = "0"));
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        dial.classList.remove("is-winding");
+        const start = performance.now();
+        const dur = 1600;
+        const tick = (now) => {
+          const p = Math.min((now - start) / dur, 1);
+          const e = 1 - Math.pow(1 - p, 4);
+          values.forEach((t) => {
+            t.textContent = Math.round(e * Number(t.dataset.count)).toLocaleString("en-US") + "+";
+          });
+          if (p < 1) requestAnimationFrame(tick);
+          else values.forEach((t, i) => (t.textContent = finals[i]));
+        };
+        requestAnimationFrame(tick);
+      }));
+    }
   </script>
 </body>
 </html>

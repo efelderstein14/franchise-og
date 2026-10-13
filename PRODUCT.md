@@ -1,0 +1,56 @@
+# Product
+
+<!-- impeccable:product-schema 1 -->
+
+## Platform
+
+web
+
+## Users
+
+People who are considering becoming a franchise broker: executives, sales professionals and consultants who want work they own. Most arrive from social media or referrals, are early in their research, have not spoken to anyone yet, and need to trust the person before they book time with him. Prospective franchise owners are not the audience of this site.
+
+## Product Purpose
+
+The Franchise OG offers a free 30-minute intro call, by phone or video, with no obligation. The site exists to get aspiring franchise brokers to book that call. Success is a booked call.
+
+## Positioning
+
+The Franchise OG helped build the franchise brokerage space: over 25 years ago he launched one of the first franchise brokerages in the nation. A newer broker network or coach can teach the job; it cannot truthfully claim to have been there when the job was invented. The call is honest guidance, including telling people when brokering is not for them yet.
+
+## Operating Context
+
+Visitors land on a single page, usually on a phone, from a social post or a referral link. Booking happens on an external scheduler (Calendly placeholder); every booking button reads one `BOOKING_URL` constant, and buttons with `data-interest` pre-fill the scheduler's first custom question.
+
+## Capabilities and Constraints
+
+- Static single page: `index.html` + `styles.css`, no build step.
+- Keep the `BOOKING_URL` placeholder and the `data-booking` / `data-interest` wiring in the inline script.
+- The footer must carry the FDD disclaimer: "This is not an offer to sell a franchise. Franchise offerings are made only by Franchise Disclosure Document."
+- Privacy and Terms links point to `/privacy` and `/terms` (pages not in this repo).
+
+## Brand Commitments
+
+- Name: The Franchise OG. He stays anonymous: no personal name, location or affiliations.
+- Voice: first person, plain, direct, no hype, no pressure. "Straight answers, no pitch."
+
+## Evidence on Hand
+
+Facts that must stay consistent everywhere they appear:
+
+- 25+ years in franchising.
+- Launched one of the first franchise brokerages in the nation, over 25 years ago.
+- 500+ candidates placed.
+- 1,000+ brokers mentored.
+- Free 30-minute intro call, phone or video, no obligation.
+
+Asset: `images/og-headshot.jpg`, a faceless photo of a man buttoning a navy suit jacket, gold watch on his wrist.
+
+There are no testimonials, case studies, press mentions, earnings figures or client names. Do not invent any; ask before adding new claims.
+
+## Product Principles
+
+1. Trust before the ask: earn belief with real, consistent facts before asking for time.
+2. Honesty is the offer: "not yet" is a legitimate outcome of the call and should be said out loud.
+3. One action: every path on the page ends at booking the call.
+4. Respect the early researcher: no jargon walls, no pressure, no gatekeeping.
