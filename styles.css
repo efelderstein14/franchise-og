@@ -225,7 +225,16 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
   font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
   color: var(--on-navy-soft);
 }
-.hero__actions { margin-top: 2.25rem; display: grid; justify-items: start; gap: 1.25rem; }
+.hero h1 { font-size: clamp(2.2rem, 1.3rem + 3.3vw, 3.9rem); }
+.hero__lede { margin-top: 1.2rem; }
+.hero__actions { margin-top: 1.75rem; display: grid; justify-items: start; gap: 1.25rem; }
+.pusher--hero {
+  min-height: 4.25rem; width: min(100%, 26rem);
+  padding: 0 2rem 0 2.4rem; justify-content: space-between;
+  font-size: 1.25rem;
+}
+.pusher__arrow { width: 1.25rem; height: 1.25rem; flex: none; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 200ms var(--ease-out); }
+.pusher--hero:hover .pusher__arrow { transform: translateX(3px); }
 
 
 .hero__photo { position: relative; padding-left: 8%; }
@@ -613,3 +622,23 @@ html:has(.request[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .request[open], .request[open]::backdrop { animation: none; }
 }
+
+/* ---------- phone dock: request button pinned to the bottom ---------- */
+
+.dock { display: none; }
+@media (max-width: 640px) {
+  .dock {
+    display: block;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9;
+    padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background: oklch(0.17 0.055 264 / 0.94);
+    border-top: 1px solid var(--track-navy);
+    box-shadow: 0 -12px 24px -12px oklch(0.05 0.05 264 / 0.8);
+    transform: translateY(110%);
+    visibility: hidden;
+    transition: transform 280ms var(--ease-out), visibility 0s linear 280ms;
+  }
+  .dock.is-shown { transform: none; visibility: visible; transition: transform 280ms var(--ease-out), visibility 0s; }
+  .dock__btn { width: 100%; min-height: 3.25rem; }
+}
+@media (prefers-reduced-motion: reduce) { .dock { transition: none; } }

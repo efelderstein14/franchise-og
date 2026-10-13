@@ -31,7 +31,7 @@
           <h1 id="hero-title">Thinking about becoming a franchise broker? <span class="gilt">Talk to the OG first.</span></h1>
           <p class="hero__lede">Get 30 minutes with someone who helped build the franchise brokerage industry. Straight answers and no pitch, before you join a network or spend a cent.</p>
           <div class="hero__actions">
-            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Request your free call</a>
+            <a class="pusher pusher--hero" data-booking data-interest="Becoming a franchise broker" href="mailto:topfranchises@gmail.com?subject=Free%20call%20request">Request your free call<svg class="pusher__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
           </div>
         </div>
 
@@ -62,7 +62,7 @@
           <li><span class="indices__mark" aria-hidden="true"></span>How the major broker networks differ, and what to ask before you join</li>
         </ol>
         <div class="fit__foot">
-          <a class="pusher pusher--navy" data-booking data-interest="Becoming a franchise broker" href="#">Talk about becoming a broker</a>
+          <a class="pusher pusher--navy" data-booking data-interest="Becoming a franchise broker" href="mailto:topfranchises@gmail.com?subject=Free%20call%20request">Talk about becoming a broker</a>
         </div>
       </div>
     </section>
@@ -167,12 +167,16 @@
         <h2 id="closer-title">Find out if brokering fits you, <span class="gilt">before you commit to anything.</span></h2>
         <div class="closer__cta">
           <div class="closer__actions">
-            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Request your free call</a>
+            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="mailto:topfranchises@gmail.com?subject=Free%20call%20request">Request your free call</a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <div class="dock" id="dock" aria-hidden="true">
+    <a class="pusher dock__btn" data-booking data-interest="Becoming a franchise broker" href="mailto:topfranchises@gmail.com?subject=Free%20call%20request" tabindex="-1">Request your free call</a>
+  </div>
 
   <footer class="footer">
     <div class="wrap">
@@ -344,6 +348,22 @@
         submit.textContent = "Request your free call";
       }
     });
+
+    // Phones: pin a request button to the bottom once the hero button has scrolled away,
+    // and tuck it away again near the closing section and footer, which have their own.
+    const dock = document.getElementById("dock");
+    if ("IntersectionObserver" in window) {
+      const seen = new Map();
+      const watched = [document.querySelector(".hero__actions"), document.querySelector(".closer"), document.querySelector(".footer")];
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => seen.set(e.target, e.isIntersecting));
+        const show = seen.has(watched[0]) && watched.every((el) => !seen.get(el));
+        dock.classList.toggle("is-shown", show);
+        dock.setAttribute("aria-hidden", String(!show));
+        dock.querySelector("a").tabIndex = show ? 0 : -1;
+      });
+      watched.forEach((el) => io.observe(el));
+    }
 
     // Count the hero figures up from zero when they come into view.
     // The final numbers are already in the HTML, so nothing is hidden if this never runs.
