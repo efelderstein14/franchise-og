@@ -24,8 +24,8 @@
   </header>
 
   <main id="main">
-    <!-- Hero: the dial -->
-    <section class="hero dial-ground" aria-labelledby="hero-title">
+    <!-- Hero -->
+    <section class="hero brushed" aria-labelledby="hero-title">
       <div class="wrap hero__grid">
         <div class="hero__copy">
           <h1 id="hero-title">Thinking about becoming a franchise broker? <span class="gilt">Talk to the OG first.</span></h1>
@@ -41,105 +41,18 @@
           </div>
         </div>
 
-        <div class="hero__dial">
-          <svg class="dial" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
-            <defs>
-              <radialGradient id="face" cx="50%" cy="42%" r="62%">
-                <stop offset="0" stop-color="#26408f"/>
-                <stop offset="0.55" stop-color="#172a66"/>
-                <stop offset="1" stop-color="#0c1638"/>
-              </radialGradient>
-              <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#f6dfa0"/>
-                <stop offset="0.45" stop-color="#d9b25e"/>
-                <stop offset="1" stop-color="#9c7630"/>
-              </linearGradient>
-              <radialGradient id="subFace" cx="50%" cy="40%" r="70%">
-                <stop offset="0" stop-color="#1d3478"/>
-                <stop offset="1" stop-color="#0f1c48"/>
-              </radialGradient>
-            </defs>
-
-            <!-- case rim and dial face -->
-            <circle cx="500" cy="500" r="496" fill="url(#goldMetal)"/>
-            <circle cx="500" cy="500" r="478" fill="#0b1433"/>
-            <circle cx="500" cy="500" r="472" fill="url(#face)"/>
-            <circle cx="500" cy="500" r="236" fill="none" stroke="#ffffff" stroke-opacity=".035" stroke-width="472" stroke-dasharray="2.0594 2.0594"/>
-
-            <!-- minute track: fifths, then minutes -->
-            <circle cx="500" cy="500" r="452" fill="none" stroke="#c9d3ee" stroke-opacity=".55" stroke-width="12" stroke-dasharray="1.4 8.06665"/>
-            <circle cx="500" cy="500" r="452" fill="none" stroke="#e8edf9" stroke-width="22" stroke-dasharray="3 44.33333" stroke-dashoffset="1.5" transform="rotate(-90 500 500)"/>
-
-            <!-- applied gold batons (3, 6 and 9 give way to the registers) -->
-            <g fill="url(#goldMetal)">
-              <rect x="482" y="60" width="13" height="78" rx="2"/>
-              <rect x="505" y="60" width="13" height="78" rx="2"/>
-              <g id="baton"><rect x="493" y="60" width="14" height="66" rx="2"/></g>
-              <use href="#baton" transform="rotate(30 500 500)"/>
-              <use href="#baton" transform="rotate(60 500 500)"/>
-              <use href="#baton" transform="rotate(120 500 500)"/>
-              <use href="#baton" transform="rotate(150 500 500)"/>
-              <use href="#baton" transform="rotate(210 500 500)"/>
-              <use href="#baton" transform="rotate(240 500 500)"/>
-              <use href="#baton" transform="rotate(300 500 500)"/>
-              <use href="#baton" transform="rotate(330 500 500)"/>
-            </g>
-
-            <!-- dial printing -->
-            <text class="dial__brand" x="500" y="208" text-anchor="middle">THE FRANCHISE OG</text>
-            <text class="dial__print" x="500" y="242" text-anchor="middle">INTRO CALL · 30 MIN</text>
-            <text class="dial__print" x="500" y="868" text-anchor="middle">PHONE OR VIDEO</text>
-
-            <!-- register: years (9 o'clock) -->
-            <g class="reg" transform="translate(272 500)">
-              <circle r="128" fill="url(#subFace)" stroke="url(#goldMetal)" stroke-width="3"/>
-              <circle r="112" fill="none" stroke="#c9d3ee" stroke-opacity=".7" stroke-width="10" stroke-dasharray="1.6 21.8574"/>
-              <text class="reg__value" y="58" text-anchor="middle" data-count="25">25+</text>
-              <text class="reg__label" y="-56" text-anchor="middle">YEARS</text>
-              <g class="hand" style="--a: 300deg"><path d="M-4 18 L-2 -100 L2 -100 L4 18 Z" fill="url(#goldMetal)"/></g>
-              <circle r="9" fill="url(#goldMetal)"/>
-            </g>
-
-            <!-- register: candidates placed (3 o'clock) -->
-            <g class="reg" transform="translate(728 500)">
-              <circle r="128" fill="url(#subFace)" stroke="url(#goldMetal)" stroke-width="3"/>
-              <circle r="112" fill="none" stroke="#c9d3ee" stroke-opacity=".7" stroke-width="10" stroke-dasharray="1.6 21.8574"/>
-              <text class="reg__value" y="58" text-anchor="middle" data-count="500">500+</text>
-              <text class="reg__label" y="-56" text-anchor="middle">PLACED</text>
-              <g class="hand" style="--a: 300deg"><path d="M-4 18 L-2 -100 L2 -100 L4 18 Z" fill="url(#goldMetal)"/></g>
-              <circle r="9" fill="url(#goldMetal)"/>
-            </g>
-
-            <!-- register: brokers mentored (6 o'clock) -->
-            <g class="reg" transform="translate(500 716)">
-              <circle r="128" fill="url(#subFace)" stroke="url(#goldMetal)" stroke-width="3"/>
-              <circle r="112" fill="none" stroke="#c9d3ee" stroke-opacity=".7" stroke-width="10" stroke-dasharray="1.6 21.8574"/>
-              <text class="reg__value" y="58" text-anchor="middle" data-count="1000">1,000+</text>
-              <text class="reg__label" y="-56" text-anchor="middle">MENTORED</text>
-              <g class="hand" style="--a: 300deg"><path d="M-4 18 L-2 -100 L2 -100 L4 18 Z" fill="url(#goldMetal)"/></g>
-              <circle r="9" fill="url(#goldMetal)"/>
-            </g>
-
-            <!-- hour and minute hands at ten past ten -->
-            <g fill="url(#goldMetal)">
-              <path d="M500 500 m-15 0 L493 262 L500 236 L507 262 L515 500 Z" transform="rotate(-60 500 500)"/>
-              <path d="M500 500 m-12 0 L494 118 L500 92 L506 118 L512 500 Z" transform="rotate(48 500 500)"/>
-            </g>
-            <!-- running chronograph seconds hand -->
-            <g class="sweep">
-              <rect x="497.5" y="70" width="5" height="520" rx="2" fill="#f2d68f"/>
-              <circle cx="500" cy="600" r="14" fill="#f2d68f"/>
-            </g>
-            <circle cx="500" cy="500" r="20" fill="url(#goldMetal)"/>
-            <circle cx="500" cy="500" r="7" fill="#0b1433"/>
-          </svg>
-
-          <dl class="registers">
-            <div><dt>Years in franchising</dt><dd>25+</dd></div>
-            <div><dt>Candidates placed</dt><dd>500+</dd></div>
-            <div><dt>Brokers mentored</dt><dd>1,000+</dd></div>
-          </dl>
-        </div>
+        <figure class="hero__photo">
+          <img src="images/og-headshot.jpg" alt="The Franchise OG buttoning a navy suit jacket, gold watch on his wrist" width="940" height="1175" fetchpriority="high">
+          <figcaption class="proof">
+            <span class="proof__kicker">Over 25 years ago</span>
+            <span class="proof__line">Launched one of the first franchise brokerages in the nation.</span>
+            <dl class="proof__figures">
+              <div><dt>Years in franchising</dt><dd>25+</dd></div>
+              <div><dt>Candidates placed</dt><dd>500+</dd></div>
+              <div><dt>Brokers mentored</dt><dd>1,000+</dd></div>
+            </dl>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -164,13 +77,8 @@
     </section>
 
     <!-- Why me -->
-    <section class="section why dial-ground dial-ground--quiet" aria-labelledby="why-title">
-      <div class="wrap why__grid">
-        <figure class="why__photo">
-          <img src="images/og-headshot.jpg" alt="The Franchise OG buttoning a navy suit jacket, gold watch on his wrist" width="940" height="1175" loading="lazy">
-          <span class="loupe" aria-hidden="true"></span>
-          <figcaption>Over 25 years ago, he launched one of the first franchise brokerages in the nation.</figcaption>
-        </figure>
+    <section class="section why brushed brushed--quiet" aria-labelledby="why-title">
+      <div class="wrap why__grid why__grid--solo">
         <div class="why__copy">
           <h2 id="why-title" class="why__quote">&ldquo;I have seen every kind of deal. My job is to help you spot a good one, and to walk away from a bad one.&rdquo;</h2>
           <div class="why__body">
@@ -210,7 +118,7 @@
     </section>
 
     <!-- Steps -->
-    <section class="section dial-ground dial-ground--quiet" aria-labelledby="steps-title">
+    <section class="section brushed brushed--quiet" aria-labelledby="steps-title">
       <div class="wrap">
         <h2 id="steps-title" class="section__title">Three steps. No pressure at any of them.</h2>
         <ol class="track">
@@ -262,22 +170,11 @@
       </div>
     </section>
 
-    <!-- Final CTA: start the counter -->
-    <section class="closer dial-ground" aria-labelledby="closer-title">
+    <!-- Final CTA -->
+    <section class="closer brushed" aria-labelledby="closer-title">
       <div class="wrap closer__inner">
         <h2 id="closer-title">Find out if brokering fits you, <span class="gilt">before you commit to anything.</span></h2>
-        <div class="closer__counter">
-          <svg class="counter" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
-            <circle cx="200" cy="200" r="196" fill="#d9b25e"/>
-            <circle cx="200" cy="200" r="186" fill="#0f1c48"/>
-            <circle cx="200" cy="200" r="166" fill="none" stroke="#c9d3ee" stroke-opacity=".6" stroke-width="16" stroke-dasharray="2 32.7575" transform="rotate(-90.35 200 200)"/>
-            <circle cx="200" cy="200" r="160" fill="none" stroke="#f2d68f" stroke-width="28" stroke-dasharray="4 163.552" transform="rotate(-90.7 200 200)"/>
-            <text x="302" y="268" text-anchor="middle" class="counter__num">10</text>
-            <text x="98" y="268" text-anchor="middle" class="counter__num">20</text>
-            <text x="200" y="300" text-anchor="middle" class="counter__label">MINUTES</text>
-            <g class="counter__hand"><path d="M195 228 L198 66 L202 66 L205 228 Z" fill="#f2d68f"/></g>
-            <circle cx="200" cy="200" r="13" fill="#f2d68f"/>
-          </svg>
+        <div class="closer__cta">
           <div class="closer__actions">
             <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Book your free intro call</a>
             <ul class="terms" aria-label="About the call">
@@ -319,31 +216,6 @@
       if (a.dataset.interest) url.searchParams.set("a1", a.dataset.interest);
       a.href = url.toString();
     });
-
-    // Wind the dial: register hands sweep to their readings while the figures count up.
-    // Everything already shows its final reading; this only animates toward it.
-    const dial = document.querySelector(".dial");
-    if (dial && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const values = dial.querySelectorAll("[data-count]");
-      const finals = [...values].map((t) => t.textContent);
-      dial.classList.add("is-winding");
-      values.forEach((t) => (t.textContent = "0"));
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        dial.classList.remove("is-winding");
-        const start = performance.now();
-        const dur = 1600;
-        const tick = (now) => {
-          const p = Math.min((now - start) / dur, 1);
-          const e = 1 - Math.pow(1 - p, 4);
-          values.forEach((t) => {
-            t.textContent = Math.round(e * Number(t.dataset.count)).toLocaleString("en-US") + "+";
-          });
-          if (p < 1) requestAnimationFrame(tick);
-          else values.forEach((t, i) => (t.textContent = finals[i]));
-        };
-        requestAnimationFrame(tick);
-      }));
-    }
   </script>
 </body>
 </html>
