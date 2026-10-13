@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T00:57:30.301274+00:00",
+  "title": "Design System: The Franchise OG",
+  "extensions": {
+    "colorMeta": {
+      "boardroom-navy": {
+        "role": "primary",
+        "displayName": "Boardroom Navy",
+        "canonical": "#14233A",
+        "oklch": "oklch(25.5% 0.048 258.7)",
+        "tonalRamp": [
+          "oklch(15% 0.048 258.7)",
+          "oklch(25% 0.048 258.7)",
+          "oklch(35% 0.048 258.7)",
+          "oklch(48% 0.048 258.7)",
+          "oklch(60% 0.048 258.7)",
+          "oklch(72% 0.048 258.7)",
+          "oklch(85% 0.048 258.7)",
+          "oklch(95% 0.048 258.7)"
+        ]
+      },
+      "boardroom-navy-raised": {
+        "role": "primary",
+        "displayName": "Boardroom Navy Raised",
+        "canonical": "#1E3150",
+        "oklch": "oklch(31.3% 0.061 259.8)",
+        "tonalRamp": [
+          "oklch(15% 0.061 259.8)",
+          "oklch(25% 0.061 259.8)",
+          "oklch(35% 0.061 259.8)",
+          "oklch(48% 0.061 259.8)",
+          "oklch(60% 0.061 259.8)",
+          "oklch(72% 0.061 259.8)",
+          "oklch(85% 0.061 259.8)",
+          "oklch(95% 0.061 259.8)"
+        ]
+      },
+      "watch-brass": {
+        "role": "secondary",
+        "displayName": "Watch Brass",
+        "canonical": "#C4953F",
+        "oklch": "oklch(69.8% 0.117 79.7)",
+        "tonalRamp": [
+          "oklch(15% 0.117 79.7)",
+          "oklch(25% 0.117 79.7)",
+          "oklch(35% 0.117 79.7)",
+          "oklch(48% 0.117 79.7)",
+          "oklch(60% 0.117 79.7)",
+          "oklch(72% 0.117 79.7)",
+          "oklch(85% 0.117 79.7)",
+          "oklch(95% 0.117 79.7)"
+        ]
+      },
+      "watch-brass-bright": {
+        "role": "secondary",
+        "displayName": "Watch Brass Bright",
+        "canonical": "#D3A85A",
+        "oklch": "oklch(75.5% 0.109 80.8)",
+        "tonalRamp": [
+          "oklch(15% 0.109 80.8)",
+          "oklch(25% 0.109 80.8)",
+          "oklch(35% 0.109 80.8)",
+          "oklch(48% 0.109 80.8)",
+          "oklch(60% 0.109 80.8)",
+          "oklch(72% 0.109 80.8)",
+          "oklch(85% 0.109 80.8)",
+          "oklch(95% 0.109 80.8)"
+        ]
+      },
+      "watch-brass-deep": {
+        "role": "secondary",
+        "displayName": "Watch Brass Deep",
+        "canonical": "#7D5A1C",
+        "oklch": "oklch(49.3% 0.089 77.7)",
+        "tonalRamp": [
+          "oklch(15% 0.089 77.7)",
+          "oklch(25% 0.089 77.7)",
+          "oklch(35% 0.089 77.7)",
+          "oklch(48% 0.089 77.7)",
+          "oklch(60% 0.089 77.7)",
+          "oklch(72% 0.089 77.7)",
+          "oklch(85% 0.089 77.7)",
+          "oklch(95% 0.089 77.7)"
+        ]
+      },
+      "parchment": {
+        "role": "neutral",
+        "displayName": "Parchment",
+        "canonical": "#F8F4EC",
+        "oklch": "oklch(96.8% 0.011 84.6)",
+        "tonalRamp": [
+          "oklch(15% 0.011 84.6)",
+          "oklch(25% 0.011 84.6)",
+          "oklch(35% 0.011 84.6)",
+          "oklch(48% 0.011 84.6)",
+          "oklch(60% 0.011 84.6)",
+          "oklch(72% 0.011 84.6)",
+          "oklch(85% 0.011 84.6)",
+          "oklch(95% 0.011 84.6)"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Sand",
+        "canonical": "#ECE3D2",
+        "oklch": "oklch(91.8% 0.025 83.4)",
+        "tonalRamp": [
+          "oklch(15% 0.025 83.4)",
+          "oklch(25% 0.025 83.4)",
+          "oklch(35% 0.025 83.4)",
+          "oklch(48% 0.025 83.4)",
+          "oklch(60% 0.025 83.4)",
+          "oklch(72% 0.025 83.4)",
+          "oklch(85% 0.025 83.4)",
+          "oklch(95% 0.025 83.4)"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "#5F5A51",
+        "oklch": "oklch(46.9% 0.016 82.4)",
+        "tonalRamp": [
+          "oklch(15% 0.016 82.4)",
+          "oklch(25% 0.016 82.4)",
+          "oklch(35% 0.016 82.4)",
+          "oklch(48% 0.016 82.4)",
+          "oklch(60% 0.016 82.4)",
+          "oklch(72% 0.016 82.4)",
+          "oklch(85% 0.016 82.4)",
+          "oklch(95% 0.016 82.4)"
+        ]
+      },
+      "rule-light": {
+        "role": "neutral",
+        "displayName": "Rule Light",
+        "canonical": "#DDD2BE",
+        "oklch": "oklch(86.7% 0.030 82.6)",
+        "tonalRamp": [
+          "oklch(15% 0.03 82.6)",
+          "oklch(25% 0.03 82.6)",
+          "oklch(35% 0.03 82.6)",
+          "oklch(48% 0.03 82.6)",
+          "oklch(60% 0.03 82.6)",
+          "oklch(72% 0.03 82.6)",
+          "oklch(85% 0.03 82.6)",
+          "oklch(95% 0.03 82.6)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#8A7F6D",
+        "oklch": "oklch(60.1% 0.030 80.1)",
+        "tonalRamp": [
+          "oklch(15% 0.03 80.1)",
+          "oklch(25% 0.03 80.1)",
+          "oklch(35% 0.03 80.1)",
+          "oklch(48% 0.03 80.1)",
+          "oklch(60% 0.03 80.1)",
+          "oklch(72% 0.03 80.1)",
+          "oklch(85% 0.03 80.1)",
+          "oklch(95% 0.03 80.1)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(25% 0 0)",
+          "oklch(35% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; second half in italic."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles; final CTA title runs at 48px."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Row, step, topic and FAQ headings."
+      },
+      "stat": {
+        "displayName": "Stat",
+        "purpose": "Credibility figures in the stats bar; tabular, count up on scroll."
+      },
+      "signoff": {
+        "displayName": "Signoff",
+        "purpose": "The italic letter signature in About."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The About letter body, set in navy."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All other running text, max 68ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons and step labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "brass-lift",
+        "value": "0 6px 16px rgba(20, 35, 58, 0.28)",
+        "purpose": "Primary button hover only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": "0.15s ease",
+        "purpose": "Color, background, border and shadow changes on buttons and links."
+      },
+      {
+        "name": "stat-count-up",
+        "value": "1400ms cubic ease-out",
+        "purpose": "Stats count up once on scroll; skipped under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "max-width: 767px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one brass action: book the free call.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Book your free call</a>",
+      "css": ".ds-btn-primary{display:inline-block;padding:16px 28px;border:2px solid #C4953F;border-radius:4px;background:#C4953F;color:#14233A;font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;font-size:16px;font-weight:600;line-height:20px;text-decoration:none;transition:color .15s ease,background-color .15s ease,border-color .15s ease,box-shadow .15s ease}.ds-btn-primary:hover{background:#D3A85A;border-color:#D3A85A;box-shadow:0 6px 16px rgba(20,35,58,.28)}.ds-btn-primary:focus-visible{outline:3px solid #7D5A1C;outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Header outline button in the surrounding text color, on navy.",
+      "html": "<div class=\"ds-navy\"><a class=\"ds-btn-secondary\" href=\"#\">Book a call</a></div>",
+      "css": ".ds-navy{background:#14233A;padding:24px;color:#F8F4EC}.ds-btn-secondary{display:inline-block;padding:12px 22px;border:2px solid currentColor;border-radius:4px;background:transparent;color:#F8F4EC;font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;font-size:16px;font-weight:600;line-height:20px;text-decoration:none;transition:color .15s ease,background-color .15s ease,border-color .15s ease}.ds-btn-secondary:hover{background:#F8F4EC;border-color:#F8F4EC;color:#14233A}.ds-btn-secondary:focus-visible{outline:3px solid #C4953F;outline-offset:2px}"
+    },
+    {
+      "name": "Ruled Rows",
+      "kind": "custom",
+      "description": "Ledger-style rows for 'who I help' and the FAQ.",
+      "html": "<ul class=\"ds-rows\"><li class=\"ds-row\"><h3>CXOs</h3><p>You have run teams, budgets and P&amp;Ls. You want work you own.</p></li><li class=\"ds-row\"><h3>Consultants</h3><p>You already advise people through big decisions.</p></li></ul>",
+      "css": ".ds-rows{margin:0;padding:0;list-style:none;border-bottom:1px solid #8A7F6D;background:#F8F4EC}.ds-row{display:grid;grid-template-columns:240px 1fr;column-gap:30px;align-items:baseline;padding:32px 0;border-top:1px solid #8A7F6D}.ds-row h3{margin:0;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:28px;line-height:34px;color:#14233A}.ds-row p{margin:0;font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;font-size:18px;line-height:28px;color:#5F5A51}"
+    },
+    {
+      "name": "Topic Block",
+      "kind": "card",
+      "description": "Call topic opened by a 2px navy rule.",
+      "html": "<div class=\"ds-topic\"><h3>How brokers get paid</h3><p>Who pays, when and why. And what that means for how you treat the people you help.</p></div>",
+      "css": ".ds-topic{padding-top:24px;border-top:2px solid #14233A;background:#ECE3D2}.ds-topic h3{margin:0;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:24px;line-height:30px;color:#14233A}.ds-topic p{margin:12px 0 0;font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;font-size:18px;line-height:28px;color:#5F5A51}"
+    },
+    {
+      "name": "Stats Bar",
+      "kind": "custom",
+      "refersTo": "stats-bar",
+      "description": "Three tabular serif figures divided by vertical rules on sand.",
+      "html": "<ul class=\"ds-stats\"><li><span class=\"n\">25+</span><span class=\"l\">years in franchising</span></li><li><span class=\"n\">500+</span><span class=\"l\">successful placements</span></li><li><span class=\"n\">1000+</span><span class=\"l\">brokers mentored</span></li></ul>",
+      "css": ".ds-stats{display:grid;grid-template-columns:repeat(3,1fr);column-gap:30px;margin:0;padding:64px 24px;list-style:none;background:#ECE3D2}.ds-stats li{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:12px}.ds-stats li+li{padding-left:30px;border-left:1px solid #8A7F6D}.ds-stats .n{font-family:Fraunces,Georgia,serif;font-size:56px;font-weight:700;line-height:64px;letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:#14233A}.ds-stats .l{font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;font-size:18px;font-weight:600;color:#5F5A51}"
+    },
+    {
+      "name": "Step",
+      "kind": "custom",
+      "description": "Numbered step: brass-deep label over a serif title.",
+      "html": "<div class=\"ds-step\"><p class=\"lbl\">Step 2</p><h3>Talk</h3><p>30 minutes by phone or video. You ask the questions.</p></div>",
+      "css": ".ds-step{background:#ECE3D2;padding:8px}.ds-step .lbl{margin:0;color:#7D5A1C;font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;font-size:16px;font-weight:600;line-height:20px}.ds-step h3{margin:12px 0 0;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:28px;line-height:34px;color:#14233A}.ds-step p:last-child{margin:12px 0 0;font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;font-size:18px;line-height:28px;color:#5F5A51}"
+    },
+    {
+      "name": "Letter Signoff",
+      "kind": "custom",
+      "description": "The italic serif signature closing the About letter.",
+      "html": "<p class=\"ds-signoff\">Sincerely, The Franchise OG</p>",
+      "css": ".ds-signoff{margin:0;font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:600;font-size:26px;line-height:34px;color:#14233A}"
+    },
+    {
+      "name": "Footer Link",
+      "kind": "nav",
+      "description": "Underlined brass-deep footer links that turn navy on hover.",
+      "html": "<nav class=\"ds-foot\"><a href=\"#\">Privacy policy</a><a href=\"#\">Terms</a></nav>",
+      "css": ".ds-foot{display:flex;gap:32px;padding:24px;background:#ECE3D2}.ds-foot a{color:#7D5A1C;font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;font-size:16px;font-weight:600;text-underline-offset:3px;transition:color .15s ease}.ds-foot a:hover{color:#14233A}.ds-foot a:focus-visible{outline:3px solid #7D5A1C;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Founder's Letter",
+    "overview": "**Creative North Star: \"The Founder's Letter\"**\n\nThe page reads like a personal letter from someone who has been in the business longer than almost anyone. Fraunces serif headlines speak in his voice, the body copy is set in plain, generous Source Sans, and the letter is signed in italic: *Sincerely, The Franchise OG*. Warm paper surfaces (parchment and sand) carry the reading. Boardroom navy frames the opening and the close like a suit jacket, and a single brass accent, the watch in the hero photo, marks the one action that matters.\n\nDensity is low and the pace is unhurried. Each section is a full-width band with one idea, set on a 12-column-equivalent grid inside a 1170px container. Structure comes from hairline rules and ruled rows, the way a ledger or a letterhead would organize a page, not from cards, shadows, or icons. Nothing is decorated for its own sake; authority comes from restraint.",
+    "keyCharacteristics": [
+      "Navy bookends (header, hero, final CTA) around alternating parchment and sand reading bands.",
+      "One brass accent, reserved for the primary booking action and small step labels.",
+      "Serif voice for every heading, stat and the sign-off; sans for everything people read at length.",
+      "Hairline rules and ruled rows instead of cards and boxes.",
+      "Flat surfaces; the only shadow is a hover response on the primary button."
+    ],
+    "rules": [
+      {
+        "name": "The One Brass Button Rule",
+        "body": "Watch Brass fills exactly one kind of element: the primary \"Book your free call\" button. If something else needs emphasis, use type or a rule, not brass.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bookend Rule",
+        "body": "Navy appears only at the top (header and hero) and the bottom (final CTA). Everything between is parchment or sand, alternating band by band.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif Speaks Rule",
+        "body": "Fraunces is used for headings, figures and the signature. It is never used for body paragraphs, buttons or labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Italic Is Earned Rule",
+        "body": "Italic appears in two places: the emphasized half of the hero headline and the sign-off. Don't add more.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Page Rule",
+        "body": "Nothing on the page casts a shadow at rest. The single permitted shadow is a hover response on the primary button.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep navy for the bookends and alternate parchment and sand for every band between them.",
+      "Do use Watch Brass Deep for any brass-colored text on a light surface, because it meets contrast and plain Watch Brass does not.",
+      "Do separate content with 1px rules and ruled rows before you reach for any container.",
+      "Do set every heading, figure and the signature in Fraunces 600 or 700, and everything else in Source Sans.",
+      "Do guard any new motion behind `prefers-reduced-motion`, as the stat count-up does."
+    ],
+    "donts": [
+      "Don't put Watch Brass on anything except the primary booking button and focus rings on navy.",
+      "Don't add drop shadows, cards with backgrounds, or floating panels. The page is flat and ruled.",
+      "Don't round anything beyond 4px for controls or 16px for photos, and don't use pill shapes.",
+      "Don't add icons, badges or decorative illustrations; the voice and the photo carry the page.",
+      "Don't introduce a third background color for reading bands."
+    ]
+  }
+}
