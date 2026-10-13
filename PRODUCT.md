@@ -8,11 +8,11 @@ web
 
 ## Users
 
-People who are considering becoming a franchise broker: executives, sales professionals and consultants who want work they own. Most arrive from social media or referrals, are early in their research, have not spoken to anyone yet, and need to trust the person before they book time with him. Prospective franchise owners are not the audience of this site.
+People who are considering becoming a franchise broker: CXOs who have run teams, budgets and P&Ls; sales professionals who can build relationships and work a pipeline; and consultants who already guide people through big decisions. They want work they own. Most arrive from social media or referrals, are early in their research, have not spoken to anyone yet, and need to trust the person before they book time with him. Prospective franchise owners are not the audience of this site.
 
 ## Product Purpose
 
-The Franchise OG offers a free 30-minute intro call, by phone or video, with no obligation. The site exists to get aspiring franchise brokers to book that call. Success is a booked call.
+The Franchise OG offers a free 30-minute intro call, by phone or video, with no obligation. The site exists to get aspiring franchise brokers to book that call. Success is a booked call. There is no paid offer behind the call: it is free advice only, and the site must not imply a coaching program, a network referral or any other sale.
 
 ## Positioning
 
@@ -44,7 +44,7 @@ Facts that must stay consistent everywhere they appear:
 - 1,000+ brokers mentored.
 - Free 30-minute intro call, phone or video, no obligation.
 
-Asset: `images/og-headshot.jpg`, a faceless photo of a man buttoning a navy suit jacket, gold watch on his wrist.
+Assets: `images/og-headshot.jpg`, a faceless photo of a man buttoning a navy suit jacket, gold watch on his wrist; `images/og-wordmark-light.svg` and `images/og-wordmark-dark.svg` (not used by the current page).
 
 There are no testimonials, case studies, press mentions, earnings figures or client names. Do not invent any; ask before adding new claims.
 
