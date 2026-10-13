@@ -91,7 +91,10 @@
     </section>
 
     <section class="band band--parchment" aria-labelledby="about-title">
-      <div class="container">
+      <div class="container about">
+        <div class="about__photo">
+          <img class="photo" src="images/og-candid.jpg" alt="The Franchise OG talking with a client across a desk" width="470" height="588" loading="lazy">
+        </div>
         <div class="about__copy">
           <h2 id="about-title">I have seen every kind of deal. Here is how to spot a good one.</h2>
           <p>Over 25 years ago, I launched one of the first-ever franchise brokerages in the nation. Since then, I've placed hundreds of candidates with their dream franchise and mentored thousands of aspiring franchise brokers.</p>
@@ -178,47 +181,6 @@
     // Replace this with your real scheduling link. Every "Book" button uses it.
     const BOOKING_URL = "https://calendly.com/REPLACE-ME/intro-call";
     document.querySelectorAll("[data-booking]").forEach((a) => { a.href = BOOKING_URL; });
-
-    // Count the stats up from 0 the first time they scroll into view.
-    // The real values stay in the HTML for no-JS visitors and screen readers.
-    (function () {
-      const nums = document.querySelectorAll(".stat__num");
-      if (!nums.length || !("IntersectionObserver" in window)) return;
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-      const DURATION = 1400;
-      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-
-      document.fonts.ready.then(() => {
-        const stats = [];
-        nums.forEach((el) => {
-          const match = el.textContent.trim().match(/^(\d+)(.*)$/);
-          if (!match) return;
-          const label = document.createElement("span");
-          label.className = "visually-hidden";
-          label.textContent = el.textContent;
-          el.before(label);
-          el.setAttribute("aria-hidden", "true");
-          // Reserve the final width so the label beside it does not shift.
-          el.style.minWidth = el.getBoundingClientRect().width + "px";
-          el.textContent = "0" + match[2];
-          stats.push({ el, target: Number(match[1]), suffix: match[2] });
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-          if (!entries.some((e) => e.isIntersecting)) return;
-          observer.disconnect();
-          const start = performance.now();
-          const tick = (now) => {
-            const t = Math.min((now - start) / DURATION, 1);
-            stats.forEach((s) => { s.el.textContent = Math.round(s.target * easeOut(t)) + s.suffix; });
-            if (t < 1) requestAnimationFrame(tick);
-          };
-          requestAnimationFrame(tick);
-        }, { threshold: 0.5 });
-        observer.observe(document.querySelector(".stats__list"));
-      });
-    })();
   </script>
 </body>
 </html>
