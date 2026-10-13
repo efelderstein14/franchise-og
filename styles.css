@@ -295,7 +295,7 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
   box-shadow: 0 1px 2px oklch(0.3 0.08 70 / 0.5);
   transform: translateY(-0.2em);
 }
-.fit__foot { grid-column: 2; }
+.fit__foot { grid-column: 1 / -1; padding-top: 1rem; }
 .fit__foot .pusher { width: 100%; min-height: 3.75rem; font-size: 1.125rem; }
 
 /* ---------- why me ---------- */
