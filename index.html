@@ -203,10 +203,17 @@
         <p id="request-intro" class="request__intro">Leave your details and I will call you for a free, 30-minute conversation about franchise brokering. No cost, no obligation.</p>
 
         <form class="request__form" id="request-form" novalidate>
-          <div class="field">
-            <label for="rq-name">Full name</label>
-            <input id="rq-name" name="name" type="text" autocomplete="name" required>
-            <p class="field__error" id="rq-name-error" hidden>Enter your name.</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="rq-first">First name</label>
+              <input id="rq-first" name="first_name" type="text" autocomplete="given-name" required>
+              <p class="field__error" id="rq-first-error" hidden>Enter your first name.</p>
+            </div>
+            <div class="field">
+              <label for="rq-last">Last name</label>
+              <input id="rq-last" name="last_name" type="text" autocomplete="family-name" required>
+              <p class="field__error" id="rq-last-error" hidden>Enter your last name.</p>
+            </div>
           </div>
           <div class="field">
             <label for="rq-phone">Phone</label>
@@ -265,7 +272,8 @@
     dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
 
     const checks = {
-      name: (v) => v.trim().length >= 2,
+      first_name: (v) => v.trim().length >= 1,
+      last_name: (v) => v.trim().length >= 1,
       phone: (v) => v.replace(/\D/g, "").length >= 10,
       email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
     };
@@ -293,13 +301,14 @@
       const invalid = Object.keys(checks).map((n) => form.elements[n]).filter((i) => !validate(i));
       if (invalid.length) { invalid[0].focus(); return; }
 
-      const name = form.elements.name.value.trim().replace(/\s+/g, " ");
-      const [firstName, ...rest] = name.split(" ");
+      const clean = (v) => v.trim().replace(/\s+/g, " ");
+      const firstName = clean(form.elements.first_name.value);
+      const lastName = clean(form.elements.last_name.value);
       const params = new URLSearchParams(location.search);
       const payload = {
-        full_name: name,
+        full_name: firstName + " " + lastName,
         first_name: firstName,
-        last_name: rest.join(" "),
+        last_name: lastName,
         phone: form.elements.phone.value.trim(),
         email: form.elements.email.value.trim(),
         interest: interest,
@@ -314,7 +323,7 @@
       };
 
       const showDone = () => {
-        dialog.querySelector("[data-first-name]").textContent = firstName ? ", " + firstName : "";
+        dialog.querySelector("[data-first-name]").textContent = ", " + firstName;
         dialog.querySelector("[data-phone]").textContent = payload.phone;
         formView.hidden = true;
         doneView.hidden = false;

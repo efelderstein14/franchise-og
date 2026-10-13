@@ -20,7 +20,7 @@ The Franchise OG helped build the franchise brokerage space: over 25 years ago h
 
 ## Operating Context
 
-Visitors land on a single page, usually on a phone, from a social post or a referral link. Visitors do not pick a time on a scheduler: every `data-booking` button opens a pop-up request form (name, phone, email), and the OG calls them back. Submissions are posted to a GoHighLevel workflow's Inbound Webhook trigger (`REQUEST_WEBHOOK_URL` in the inline script) as form fields: full_name, first_name, last_name, phone, email, interest (from the button's `data-interest`), source, page_url, utm_* and submitted_at.
+Visitors land on a single page, usually on a phone, from a social post or a referral link. Visitors do not pick a time on a scheduler: every `data-booking` button opens a pop-up request form (first name, last name, phone, email), and the OG calls them back. Submissions are posted to a GoHighLevel workflow's Inbound Webhook trigger (`REQUEST_WEBHOOK_URL` in the inline script) as form fields: full_name, first_name, last_name, phone, email, interest (from the button's `data-interest`), source, page_url, utm_* and submitted_at.
 
 ## Capabilities and Constraints
 
