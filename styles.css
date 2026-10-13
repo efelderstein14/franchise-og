@@ -226,6 +226,8 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
   color: var(--on-navy-soft);
 }
 .hero .terms { display: grid; grid-template-columns: repeat(2, max-content); gap: 0.55rem 1.75rem; }
+.hero .terms li::before { display: none; }
+.hero .terms { justify-content: start; }
 .hero__actions { margin-top: 2.25rem; display: grid; justify-items: start; gap: 1.25rem; }
 
 .terms { display: flex; flex-wrap: wrap; gap: 0.4rem 0; color: var(--on-navy-soft); font-size: 0.75rem; }
