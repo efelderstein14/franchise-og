@@ -45,6 +45,7 @@
   --ink: oklch(0.23 0.07 264);
   --ink-soft: oklch(0.40 0.05 262);
   --track-ink: oklch(0.38 0.06 262 / 0.22);
+  --rule: var(--track-navy);
 
   --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --print: "Michroma", "Archivo", sans-serif;
@@ -118,6 +119,12 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
     radial-gradient(120% 90% at 50% 0%, oklch(0.975 0.004 255), transparent 70%),
     var(--opaline);
   color: var(--ink);
+  --rule: var(--track-ink);
+}
+.opaline--deep {
+  background:
+    radial-gradient(120% 90% at 50% 0%, oklch(0.94 0.008 255), transparent 70%),
+    var(--opaline-deep);
 }
 
 /* ---------- type ---------- */
@@ -142,8 +149,7 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
 /* the small printed-caps voice */
 .wordmark,
 .track__num,
-.why__sign,
-.ledger h3 {
+.why__sign {
   font-family: var(--print);
   font-size: 0.72rem;
   letter-spacing: 0.16em;
@@ -328,24 +334,6 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
 .why__grid--solo .why__body p { max-width: 54rem; text-wrap: balance; }
 .why__sign { color: var(--gold); font-size: 0.8rem; margin-top: 0.75rem; }
 
-/* ---------- is / isn't ---------- */
-
-.ledger {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 5rem);
-}
-.ledger h3 { color: var(--ink-soft); padding-bottom: 1rem; border-bottom: 2px solid var(--ink); }
-.ledger li {
-  display: grid; grid-template-columns: 1.75rem 1fr; gap: 0.5rem; align-items: start;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--track-ink);
-  font-size: 1.125rem;
-}
-.mark { width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; stroke: var(--gold-lo); }
-.ledger__col--not .mark { stroke: var(--ink-soft); }
-.ledger__col--not li { color: var(--ink-soft); }
-
 /* ---------- steps on the minute track ---------- */
 
 .track {
@@ -360,8 +348,8 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
   content: "";
   position: absolute; left: 0; right: 0; top: 0.9rem; height: 14px;
   background:
-    linear-gradient(var(--track-navy), var(--track-navy)) 0 100% / 100% 1px no-repeat,
-    repeating-linear-gradient(90deg, var(--track-navy) 0 1px, transparent 1px 12px) 0 100% / 100% 8px no-repeat;
+    linear-gradient(var(--rule), var(--rule)) 0 100% / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, var(--rule) 0 1px, transparent 1px 12px) 0 100% / 100% 8px no-repeat;
 }
 .track__step { position: relative; }
 .track__num {
@@ -376,6 +364,7 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
 }
 .track h3 { margin-bottom: 0.6rem; font-size: 1.375rem; }
 .track p { color: var(--on-navy-soft); max-width: 32ch; }
+.opaline .track p { color: var(--ink-soft); }
 
 /* ---------- faq ---------- */
 
@@ -462,13 +451,12 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
   .hero__photo img { aspect-ratio: 1 / 1; object-position: 50% 30%; }
   .proof { position: relative; left: auto; bottom: auto; width: auto; margin: -3.5rem 0.75rem 0; }
 
-  .ledger { grid-template-columns: 1fr; }
   .track { grid-template-columns: 1fr; gap: 2.75rem; padding-top: 0; padding-left: 3.5rem; }
   .track::before {
     left: 1.15rem; right: auto; top: 0; bottom: 0; width: 14px; height: auto;
     background:
-      linear-gradient(var(--track-navy), var(--track-navy)) 0 0 / 1px 100% no-repeat,
-      repeating-linear-gradient(180deg, var(--track-navy) 0 1px, transparent 1px 12px) 0 0 / 8px 100% no-repeat;
+      linear-gradient(var(--rule), var(--rule)) 0 0 / 1px 100% no-repeat,
+      repeating-linear-gradient(180deg, var(--rule) 0 1px, transparent 1px 12px) 0 0 / 8px 100% no-repeat;
   }
   .track__num { top: -0.2rem; left: -3.5rem; }
 }
