@@ -38,8 +38,6 @@
         <figure class="hero__photo">
           <img src="images/og-headshot.jpg" alt="The Franchise OG buttoning a navy suit jacket, gold watch on his wrist" width="940" height="1175" fetchpriority="high">
           <figcaption class="proof">
-            <span class="proof__kicker">Over 25 years ago</span>
-            <span class="proof__line">Launched one of the first franchise brokerages in the nation.</span>
             <dl class="proof__figures">
               <div><dt>Years in franchising</dt><dd data-count="25">25+</dd></div>
               <div><dt>Candidates placed</dt><dd data-count="500">500+</dd></div>
@@ -357,7 +355,7 @@
         el.style.minWidth = el.offsetWidth + "px";
         el.textContent = format(0);
         const start = performance.now() + delay;
-        const dur = 1400;
+        const dur = 2000;
         const tick = (now) => {
           const p = Math.min(Math.max((now - start) / dur, 0), 1);
           el.textContent = format(Math.round(target * (1 - Math.pow(1 - p, 4))));
@@ -368,7 +366,7 @@
       const io = new IntersectionObserver((entries) => {
         if (!entries.some((e) => e.isIntersecting)) return;
         io.disconnect();
-        figures.forEach((el, i) => countUp(el, i * 120));
+        figures.forEach((el, i) => countUp(el, i * 160));
       }, { threshold: 0.6 });
       io.observe(figures[0].closest("dl"));
     }
