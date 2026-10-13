@@ -444,8 +444,8 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
 @media (max-width: 640px) {
   body { font-size: 1rem; }
   .masthead__inner { min-height: 3.75rem; }
-  .wordmark { font-size: 0.75rem; letter-spacing: 0.16em; }
-  .pusher--small { min-height: 2.5rem; padding: 0 0.95rem; font-size: 0.875rem; }
+  .wordmark { font-size: 0.6875rem; letter-spacing: 0.1em; white-space: nowrap; }
+  .pusher--small { min-height: 2.5rem; padding: 0 0.8rem; font-size: 0.8125rem; white-space: nowrap; }
   .hero__actions .pusher, .closer__actions .pusher, .fit__foot .pusher { width: 100%; }
   .hero__actions, .closer__actions { justify-items: stretch; }
   .closer__cta { justify-items: stretch; }
