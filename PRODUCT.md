@@ -8,55 +8,49 @@ web
 
 ## Users
 
-Mid-career professionals exploring a move into franchise brokering, usually early and still undecided:
-
-- **CXOs** who have run teams, budgets and P&Ls and want work they own.
-- **Sales professionals** who can build relationships and work a pipeline, and want to point those skills at something they believe in.
-- **Consultants** who already guide people through big decisions.
-
-They arrive curious, often before they have signed with any broker network. Their job is to find out, without pressure, whether this work fits them and what it really involves.
+People who are considering becoming a franchise broker: CXOs who have run teams, budgets and P&Ls; sales professionals who can build relationships and work a pipeline; and consultants who already guide people through big decisions. They want work they own. Most arrive from social media or referrals, are early in their research, have not spoken to anyone yet, and need to trust the person before they book time with him. Prospective franchise owners are not the audience of this site.
 
 ## Product Purpose
 
-A single landing page for **The Franchise OG**, a franchising veteran who offers a free 30-minute intro call (phone or video). The call covers whether brokering fits the visitor, how brokers get clients, how brokers get paid, and which broker network suits them.
-
-Success is a booked call. There is no paid offer behind the call: it is free advice only, and future work must not imply a coaching program, a network referral, or any other sale.
+The Franchise OG offers a free 30-minute intro call, by phone or video, with no obligation. The site exists to get aspiring franchise brokers to book that call. Success is a booked call. There is no paid offer behind the call: it is free advice only, and the site must not imply a coaching program, a network referral or any other sale.
 
 ## Positioning
 
-Advice from someone who helped start the franchise broker industry: over 25 years in franchising, and one of the first franchise brokerages in the nation. Because nothing is being sold, the advice can be straight, including "not yet" or "this isn't for you."
+The Franchise OG helped build the franchise brokerage space: over 25 years ago he launched one of the first franchise brokerages in the nation. A newer broker network or coach can teach the job; it cannot truthfully claim to have been there when the job was invented. The call is honest guidance, including telling people when brokering is not for them yet.
 
 ## Operating Context
 
-- Visitors book through an external scheduling link. Every booking button carries `data-booking` and gets its URL from `BOOKING_URL` in `index.html`. It is still a placeholder (`https://calendly.com/REPLACE-ME/intro-call`).
-- The flow is three steps: book (share background and interest), talk (30 minutes, visitor asks the questions), and leave with next steps.
-- It is franchise-adjacent marketing, so the footer carries the disclaimer: "This is not an offer to sell a franchise. Franchise offerings are made only by Franchise Disclosure Document."
+Visitors land on a single page, usually on a phone, from a social post or a referral link. Booking happens on an external scheduler (Calendly placeholder); every booking button reads one `BOOKING_URL` constant, and buttons with `data-interest` pre-fill the scheduler's first custom question.
 
 ## Capabilities and Constraints
 
-- Static site: `index.html`, `styles.css`, and a small inline script. There is no build step or framework.
-- `/privacy` and `/terms` are linked but do not exist in this repo yet.
-- **Confirmed figures:** 25+ years in franchising, 500+ successful placements, 1000+ brokers mentored. The current copy disagrees with these ("20+ years" in the hero and stats; "hundreds" and "thousands" in About). Bring it into line when the page is next edited.
+- Static single page: `index.html` + `styles.css`, no build step.
+- Keep the `BOOKING_URL` placeholder and the `data-booking` / `data-interest` wiring in the inline script.
+- The footer must carry the FDD disclaimer: "This is not an offer to sell a franchise. Franchise offerings are made only by Franchise Disclosure Document."
+- Privacy and Terms links point to `/privacy` and `/terms` (pages not in this repo).
 
 ## Brand Commitments
 
-- **Name:** The Franchise OG. A persona for now; no real name is shown.
-- **Assets:** `images/og-wordmark-light.svg`, `images/og-wordmark-dark.svg`, `images/og-headshot.jpg`.
-- **Voice:** first person, plain and direct, no hype. Short sentences. It is candid about fit ("Most people who ask me about brokering should not start yet") and explicitly no-pressure.
+- Name: The Franchise OG. He stays anonymous: no personal name, location or affiliations.
+- Voice: first person, plain, direct, no hype, no pressure. "Straight answers, no pitch."
 
 ## Evidence on Hand
 
-- The three confirmed figures above, and the founding-era brokerage claim.
-- The headshot photo.
-- **Absent:** the person's real name, the name of the original brokerage, testimonials, case studies, press, logos, and named clients or networks. Future work must not invent any of these.
+Facts that must stay consistent everywhere they appear:
+
+- 25+ years in franchising.
+- Launched one of the first franchise brokerages in the nation, over 25 years ago.
+- 500+ candidates placed.
+- 1,000+ brokers mentored.
+- Free 30-minute intro call, phone or video, no obligation.
+
+Assets: `images/og-headshot.jpg`, a faceless photo of a man buttoning a navy suit jacket, gold watch on his wrist; `images/og-wordmark-light.svg` and `images/og-wordmark-dark.svg` (not used by the current page).
+
+There are no testimonials, case studies, press mentions, earnings figures or client names. Do not invent any; ask before adding new claims.
 
 ## Product Principles
 
-1. **Honesty is the offer.** Nothing is being sold, so never write copy that sells harder than the call does.
-2. **One action.** Every section serves booking the free call.
-3. **Meet people early.** Talk to visitors as curious, not committed, and lower the stakes of reaching out.
-4. **Claims stay provable.** Use only the confirmed figures. Mark anything unverified, and never fabricate proof.
-
-## Accessibility & Inclusion
-
-The page already includes a skip link, real values in the HTML for screen readers behind the animated stats, and a `prefers-reduced-motion` check. Keep these in place. No formal standard has been specified beyond that.
+1. Trust before the ask: earn belief with real, consistent facts before asking for time.
+2. Honesty is the offer: "not yet" is a legitimate outcome of the call and should be said out loud.
+3. One action: every path on the page ends at booking the call.
+4. Respect the early researcher: no jargon walls, no pressure, no gatekeeping.
