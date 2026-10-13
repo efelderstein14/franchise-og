@@ -12,7 +12,7 @@ People who are considering becoming a franchise broker: CXOs who have run teams,
 
 ## Product Purpose
 
-The Franchise OG offers a free 30-minute intro call, by phone or video, with no obligation. The site exists to get aspiring franchise brokers to book that call. Success is a booked call. There is no paid offer behind the call: it is free advice only, and the site must not imply a coaching program, a network referral or any other sale.
+The Franchise OG offers a free 30-minute intro call, by phone only (no video), with no obligation. The site exists to get aspiring franchise brokers to book that call. Success is a booked call. There is no paid offer behind the call: it is free advice only, and the site must not imply a coaching program, a network referral or any other sale.
 
 ## Positioning
 
@@ -20,7 +20,7 @@ The Franchise OG helped build the franchise brokerage space: over 25 years ago h
 
 ## Operating Context
 
-Visitors land on a single page, usually on a phone, from a social post or a referral link. Booking happens on an external scheduler (Calendly placeholder); every booking button reads one `BOOKING_URL` constant, and buttons with `data-interest` pre-fill the scheduler's first custom question.
+Visitors land on a single page, usually on a phone, from a social post or a referral link. Visitors do not pick a time on a scheduler: they send a short request (background and interest) and the OG calls them back. Every booking button reads one `BOOKING_URL` constant (still a placeholder for the request form), and buttons with `data-interest` pass the visitor's path as a pre-fill parameter.
 
 ## Capabilities and Constraints
 
@@ -42,7 +42,7 @@ Facts that must stay consistent everywhere they appear:
 - Launched one of the first franchise brokerages in the nation, over 25 years ago.
 - 500+ candidates placed.
 - 1,000+ brokers mentored.
-- Free 30-minute intro call, phone or video, no obligation.
+- Free 30-minute intro call, by phone, no obligation. Not a video call, and not self-scheduled.
 
 Assets: `images/og-headshot.jpg`, a faceless photo of a man buttoning a navy suit jacket, gold watch on his wrist; `images/og-wordmark-light.svg` and `images/og-wordmark-dark.svg` (not used by the current page).
 
