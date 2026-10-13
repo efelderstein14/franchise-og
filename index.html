@@ -19,7 +19,7 @@
   <header class="masthead">
     <div class="wrap masthead__inner">
       <a class="wordmark" href="#main" aria-label="The Franchise OG, back to top">The Franchise OG</a>
-      <a class="pusher pusher--small" data-booking href="#">Book a free call</a>
+      <a class="pusher pusher--small" data-booking href="mailto:topfranchises@gmail.com?subject=Free%20call%20request">Request your free call</a>
     </div>
   </header>
 
@@ -31,7 +31,7 @@
           <h1 id="hero-title">Thinking about becoming a franchise broker? <span class="gilt">Talk to the OG first.</span></h1>
           <p class="hero__lede">Get 30 minutes with someone who helped build the franchise brokerage industry. Straight answers and no pitch, before you join a network or spend a cent.</p>
           <div class="hero__actions">
-            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Book your free intro call</a>
+            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Request your free call</a>
           </div>
         </div>
 
@@ -169,7 +169,7 @@
         <h2 id="closer-title">Find out if brokering fits you, <span class="gilt">before you commit to anything.</span></h2>
         <div class="closer__cta">
           <div class="closer__actions">
-            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Book your free intro call</a>
+            <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Request your free call</a>
           </div>
         </div>
       </div>
@@ -192,17 +192,150 @@
     </div>
   </footer>
 
+  <dialog class="request" id="request" aria-labelledby="request-title" aria-describedby="request-intro">
+    <div class="request__panel">
+      <button class="request__close" type="button" data-request-close aria-label="Close">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </button>
+
+      <div class="request__form-view">
+        <h2 id="request-title">Request your free call</h2>
+        <p id="request-intro" class="request__intro">Leave your details and I will call you for a free, 30-minute conversation about franchise brokering. No cost, no obligation.</p>
+
+        <form class="request__form" id="request-form" novalidate>
+          <div class="field">
+            <label for="rq-name">Full name</label>
+            <input id="rq-name" name="name" type="text" autocomplete="name" required>
+            <p class="field__error" id="rq-name-error" hidden>Enter your name.</p>
+          </div>
+          <div class="field">
+            <label for="rq-phone">Phone</label>
+            <input id="rq-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+            <p class="field__error" id="rq-phone-error" hidden>Enter a phone number with at least 10 digits.</p>
+          </div>
+          <div class="field">
+            <label for="rq-email">Email</label>
+            <input id="rq-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+            <p class="field__error" id="rq-email-error" hidden>Enter an email address like name@example.com.</p>
+          </div>
+          <div class="field field--trap" aria-hidden="true">
+            <label for="rq-company">Company</label>
+            <input id="rq-company" name="company" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="pusher pusher--navy request__submit" type="submit">Request your free call</button>
+          <p class="request__status" role="alert" hidden></p>
+
+          <p class="request__consent">By submitting, you agree that MFO Inc. and its affiliates may contact you by phone, email and text message at the details above about your request and franchise brokering opportunities. Consent is not a condition of any purchase. Message and data rates may apply; reply STOP to opt out. See our <a href="privacy.html">Privacy policy</a> and <a href="terms.html">Terms</a>.</p>
+        </form>
+      </div>
+
+      <div class="request__done" hidden tabindex="-1">
+        <h2 class="request__done-title">Thanks<span data-first-name></span>. Your request is in.</h2>
+        <p>I will call you at <strong data-phone></strong> to talk. If you need to reach me first, email topfranchises@gmail.com.</p>
+        <button class="pusher pusher--navy" type="button" data-request-close>Close</button>
+      </div>
+    </div>
+  </dialog>
+
 
   <script>
-    // Replace this with the link to your call-request form. Every booking button uses it.
-    // Buttons with data-interest pass the visitor's path along as "a1"; rename that
-    // parameter to whatever your form tool uses to pre-fill a field.
-    const BOOKING_URL = "https://calendly.com/REPLACE-ME/intro-call";
+    // Paste the URL of your GoHighLevel workflow's "Inbound Webhook" trigger here.
+    // Every [data-booking] button opens the request form; submissions are sent to this URL.
+    const REQUEST_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/dVmgNgXVCJPMQwBu9OgU/webhook-trigger/ded3cf5e-1536-4471-889d-f4fb7a57a7da";
+
+    const dialog = document.getElementById("request");
+    const form = document.getElementById("request-form");
+    const formView = dialog.querySelector(".request__form-view");
+    const doneView = dialog.querySelector(".request__done");
+    const status = form.querySelector(".request__status");
+    const submit = form.querySelector(".request__submit");
+    let interest = "";
 
     document.querySelectorAll("[data-booking]").forEach((a) => {
-      const url = new URL(BOOKING_URL);
-      if (a.dataset.interest) url.searchParams.set("a1", a.dataset.interest);
-      a.href = url.toString();
+      a.addEventListener("click", (e) => {
+        if (typeof dialog.showModal !== "function") return; // very old browsers fall back to the email link
+        e.preventDefault();
+        interest = a.dataset.interest || "";
+        if (!doneView.hidden) { form.reset(); doneView.hidden = true; formView.hidden = false; }
+        dialog.showModal();
+      });
+    });
+    dialog.querySelectorAll("[data-request-close]").forEach((b) => b.addEventListener("click", () => dialog.close()));
+    dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+
+    const checks = {
+      name: (v) => v.trim().length >= 2,
+      phone: (v) => v.replace(/\D/g, "").length >= 10,
+      email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    };
+    const validate = (input) => {
+      const ok = checks[input.name](input.value);
+      const err = document.getElementById(input.id + "-error");
+      err.hidden = ok;
+      input.setAttribute("aria-invalid", String(!ok));
+      if (ok) input.removeAttribute("aria-describedby"); else input.setAttribute("aria-describedby", err.id);
+      return ok;
+    };
+    Object.keys(checks).forEach((name) => {
+      form.elements[name].addEventListener("blur", (e) => { if (e.target.value) validate(e.target); });
+      form.elements[name].addEventListener("input", (e) => { if (e.target.getAttribute("aria-invalid") === "true") validate(e.target); });
+    });
+
+    // Sent as a plain form post: no preflight, so it always reaches the webhook once.
+    // The browser can't read the reply, so only network failures show an error.
+    const send = (payload) =>
+      fetch(REQUEST_WEBHOOK_URL, { method: "POST", mode: "no-cors", body: new URLSearchParams(payload) });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      status.hidden = true;
+      const invalid = Object.keys(checks).map((n) => form.elements[n]).filter((i) => !validate(i));
+      if (invalid.length) { invalid[0].focus(); return; }
+
+      const name = form.elements.name.value.trim().replace(/\s+/g, " ");
+      const [firstName, ...rest] = name.split(" ");
+      const params = new URLSearchParams(location.search);
+      const payload = {
+        full_name: name,
+        first_name: firstName,
+        last_name: rest.join(" "),
+        phone: form.elements.phone.value.trim(),
+        email: form.elements.email.value.trim(),
+        interest: interest,
+        source: "The Franchise OG website",
+        page_url: location.href,
+        utm_source: params.get("utm_source") || "",
+        utm_medium: params.get("utm_medium") || "",
+        utm_campaign: params.get("utm_campaign") || "",
+        utm_content: params.get("utm_content") || "",
+        utm_term: params.get("utm_term") || "",
+        submitted_at: new Date().toISOString(),
+      };
+
+      const showDone = () => {
+        dialog.querySelector("[data-first-name]").textContent = firstName ? ", " + firstName : "";
+        dialog.querySelector("[data-phone]").textContent = payload.phone;
+        formView.hidden = true;
+        doneView.hidden = false;
+        doneView.focus();
+      };
+
+      if (form.elements.company.value) { showDone(); return; } // a bot filled the hidden field
+
+      submit.disabled = true;
+      submit.textContent = "Sending\u2026";
+      try {
+        if (REQUEST_WEBHOOK_URL.includes("REPLACE-ME")) throw new Error("Webhook URL not set");
+        await send(payload);
+        showDone();
+      } catch (err) {
+        status.textContent = "Your request didn\u2019t go through. Please try again, or email topfranchises@gmail.com and I will call you.";
+        status.hidden = false;
+      } finally {
+        submit.disabled = false;
+        submit.textContent = "Request your free call";
+      }
     });
 
     // Count the hero figures up from zero when they come into view.

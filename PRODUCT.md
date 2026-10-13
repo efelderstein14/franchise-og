@@ -20,14 +20,14 @@ The Franchise OG helped build the franchise brokerage space: over 25 years ago h
 
 ## Operating Context
 
-Visitors land on a single page, usually on a phone, from a social post or a referral link. Visitors do not pick a time on a scheduler: they send a short request (background and interest) and the OG calls them back. Every booking button reads one `BOOKING_URL` constant (still a placeholder for the request form), and buttons with `data-interest` pass the visitor's path as a pre-fill parameter.
+Visitors land on a single page, usually on a phone, from a social post or a referral link. Visitors do not pick a time on a scheduler: every `data-booking` button opens a pop-up request form (name, phone, email), and the OG calls them back. Submissions are posted to a GoHighLevel workflow's Inbound Webhook trigger (`REQUEST_WEBHOOK_URL` in the inline script) as form fields: full_name, first_name, last_name, phone, email, interest (from the button's `data-interest`), source, page_url, utm_* and submitted_at.
 
 ## Capabilities and Constraints
 
 - Static single page: `index.html` + `styles.css`, no build step.
-- Keep the `BOOKING_URL` placeholder and the `data-booking` / `data-interest` wiring in the inline script.
+- Keep the `data-booking` / `data-interest` wiring and the `REQUEST_WEBHOOK_URL` constant in the inline script; the form's consent line must stay under the submit button.
 - The footer must carry the FDD disclaimer: "This is not an offer to sell a franchise. Franchise offerings are made only by Franchise Disclosure Document."
-- Privacy and Terms links point to `/privacy` and `/terms` (pages not in this repo).
+- Privacy policy and Terms live in `privacy.html` and `terms.html` (operator MFO Inc., Maryland law, contact topfranchises@gmail.com).
 
 ## Brand Commitments
 
