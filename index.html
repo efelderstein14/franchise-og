@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Franchise OG | Free intro call about becoming a franchise broker</title>
-  <meta name="description" content="Thinking about becoming a franchise broker? Book a free 30-minute call with the industry veteran who helped build the franchise brokerage space.">
+  <meta name="description" content="Thinking about becoming a franchise broker? Request a free 30-minute phone call with the industry veteran who helped build the franchise brokerage space.">
   <meta property="og:title" content="Thinking about becoming a franchise broker? Talk to the OG first.">
   <meta property="og:description" content="A free 30-minute call with a 25-year franchise veteran. Straight answers, no pitch.">
   <meta property="og:image" content="images/og-headshot.jpg">
@@ -32,12 +32,6 @@
           <p class="hero__lede">Get 30 minutes with someone who helped build the franchise brokerage industry. Straight answers and no pitch, before you join a network or spend a cent.</p>
           <div class="hero__actions">
             <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Book your free intro call</a>
-            <ul class="terms" aria-label="About the call">
-              <li>Free</li>
-              <li>30 minutes</li>
-              <li>Phone or video</li>
-              <li>No obligation</li>
-            </ul>
           </div>
         </div>
 
@@ -47,9 +41,9 @@
             <span class="proof__kicker">Over 25 years ago</span>
             <span class="proof__line">Launched one of the first franchise brokerages in the nation.</span>
             <dl class="proof__figures">
-              <div><dt>Years in franchising</dt><dd>25+</dd></div>
-              <div><dt>Candidates placed</dt><dd>500+</dd></div>
-              <div><dt>Brokers mentored</dt><dd>1,000+</dd></div>
+              <div><dt>Years in franchising</dt><dd data-count="25">25+</dd></div>
+              <div><dt>Candidates placed</dt><dd data-count="500">500+</dd></div>
+              <div><dt>Brokers mentored</dt><dd data-count="1000">1,000+</dd></div>
             </dl>
           </figcaption>
         </figure>
@@ -71,7 +65,6 @@
         </ol>
         <div class="fit__foot">
           <a class="pusher pusher--navy" data-booking data-interest="Becoming a franchise broker" href="#">Talk about becoming a broker</a>
-          <p>Not sure yet? That is the best time to call.</p>
         </div>
       </div>
     </section>
@@ -124,13 +117,13 @@
         <ol class="track">
           <li class="track__step">
             <span class="track__num" aria-hidden="true">1</span>
-            <h3>Pick a time</h3>
-            <p>Choose a slot that suits you. Tell me a little about your background and what draws you to franchise brokering.</p>
+            <h3>Send a request</h3>
+            <p>Tell me a little about your background and what draws you to franchise brokering. I will call you to talk.</p>
           </li>
           <li class="track__step">
             <span class="track__num" aria-hidden="true">2</span>
             <h3>Talk for 30 minutes</h3>
-            <p>By phone or video. You ask, I answer straight. Bring every question you have been googling.</p>
+            <p>By phone. You ask, I answer straight. Bring every question you have been googling.</p>
           </li>
           <li class="track__step">
             <span class="track__num" aria-hidden="true">3</span>
@@ -144,7 +137,7 @@
     <!-- FAQ -->
     <section class="section opaline" aria-labelledby="faq-title">
       <div class="wrap faq">
-        <h2 id="faq-title" class="section__title">What people ask me before they book.</h2>
+        <h2 id="faq-title" class="section__title">What people ask me before we talk.</h2>
         <div class="faq__list">
           <details>
             <summary>Is the call really free?</summary>
@@ -177,11 +170,6 @@
         <div class="closer__cta">
           <div class="closer__actions">
             <a class="pusher" data-booking data-interest="Becoming a franchise broker" href="#">Book your free intro call</a>
-            <ul class="terms" aria-label="About the call">
-              <li>Free</li>
-              <li>30 minutes</li>
-              <li>No obligation</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -206,9 +194,9 @@
 
 
   <script>
-    // Replace this with your real scheduling link. Every booking button uses it.
-    // Buttons with data-interest pass the visitor's path along. With Calendly,
-    // "a1" pre-fills the answer to the first custom question on the booking form.
+    // Replace this with the link to your call-request form. Every booking button uses it.
+    // Buttons with data-interest pass the visitor's path along as "a1"; rename that
+    // parameter to whatever your form tool uses to pre-fill a field.
     const BOOKING_URL = "https://calendly.com/REPLACE-ME/intro-call";
 
     document.querySelectorAll("[data-booking]").forEach((a) => {
@@ -216,6 +204,32 @@
       if (a.dataset.interest) url.searchParams.set("a1", a.dataset.interest);
       a.href = url.toString();
     });
+
+    // Count the hero figures up from zero when they come into view.
+    // The final numbers are already in the HTML, so nothing is hidden if this never runs.
+    const figures = document.querySelectorAll("[data-count]");
+    if (figures.length && "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const format = (n) => n.toLocaleString("en-US") + "+";
+      const countUp = (el, delay) => {
+        const target = Number(el.dataset.count);
+        el.style.minWidth = el.offsetWidth + "px";
+        el.textContent = format(0);
+        const start = performance.now() + delay;
+        const dur = 1400;
+        const tick = (now) => {
+          const p = Math.min(Math.max((now - start) / dur, 0), 1);
+          el.textContent = format(Math.round(target * (1 - Math.pow(1 - p, 4))));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      const io = new IntersectionObserver((entries) => {
+        if (!entries.some((e) => e.isIntersecting)) return;
+        io.disconnect();
+        figures.forEach((el, i) => countUp(el, i * 120));
+      }, { threshold: 0.6 });
+      io.observe(figures[0].closest("dl"));
+    }
   </script>
 </body>
 </html>

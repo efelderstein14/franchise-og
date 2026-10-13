@@ -140,7 +140,6 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
 
 /* the small printed-caps voice */
 .wordmark,
-.terms,
 .track__num,
 .why__sign,
 .ledger h3 {
@@ -225,16 +224,8 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
   font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
   color: var(--on-navy-soft);
 }
-.hero .terms { display: grid; grid-template-columns: repeat(2, max-content); gap: 0.55rem 1.75rem; }
 .hero__actions { margin-top: 2.25rem; display: grid; justify-items: start; gap: 1.25rem; }
 
-.terms { display: flex; flex-wrap: wrap; gap: 0.4rem 0; color: var(--on-navy-soft); font-size: 0.75rem; }
-.terms { gap: 0.5rem 1.6rem; }
-.terms li { display: inline-flex; align-items: center; white-space: nowrap; }
-.terms li::before {
-  content: ""; width: 4px; height: 4px; margin-right: 0.6rem; flex: none;
-  background: var(--gold); transform: rotate(45deg);
-}
 
 .hero__photo { position: relative; padding-left: 8%; }
 .hero__photo img {
@@ -301,7 +292,6 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
   grid-column: 2;
   display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem;
 }
-.fit__foot p { color: var(--ink-soft); font-style: italic; }
 
 /* ---------- why me ---------- */
 
@@ -458,7 +448,7 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
   .pusher--small { min-height: 2.5rem; padding: 0 0.95rem; font-size: 0.875rem; }
   .hero__actions .pusher, .closer__actions .pusher, .fit__foot .pusher { width: 100%; }
   .hero__actions, .closer__actions { justify-items: stretch; }
-  .terms { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 0.55rem 1.5rem; letter-spacing: 0.1em; }
+  .closer__cta { justify-items: stretch; }
 
   .hero__photo { padding-left: 0; }
   .hero__photo img { aspect-ratio: 1 / 1; object-position: 50% 30%; }
