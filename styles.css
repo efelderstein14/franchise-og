@@ -468,3 +468,54 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
 @media (prefers-reduced-motion: reduce) {
   .pusher, .faq__list summary::after { transition: none; }
 }
+
+/* ---------- legal pages ---------- */
+
+.legal__back { color: var(--on-navy-soft); font-size: 0.9375rem; text-decoration: none; }
+.legal__back:hover { color: var(--gold); }
+
+.legal-hero { padding-block: clamp(3.5rem, 8vw, 6rem) clamp(3rem, 6vw, 4.5rem); }
+.legal-hero h1 { font-size: clamp(2.4rem, 1.4rem + 3.6vw, 4.25rem); }
+.legal-hero__meta {
+  margin-top: 1rem;
+  font-family: var(--print); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold);
+}
+.legal-hero__lede { margin-top: 1.25rem; max-width: 38rem; font-size: 1.125rem; color: var(--on-navy-soft); }
+
+.legal {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+.legal__toc { position: sticky; top: 6rem; }
+.legal__toc-title {
+  font-family: var(--print); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-soft); padding-bottom: 0.75rem; border-bottom: 2px solid var(--ink);
+}
+.legal__toc ol { display: grid; }
+.legal__toc li { border-bottom: 1px solid var(--track-ink); }
+.legal__toc a { display: block; padding: 0.55rem 0; font-size: 0.9375rem; color: var(--ink-soft); text-decoration: none; }
+.legal__toc a:hover { color: var(--ink); }
+
+.legal__body { max-width: 68ch; display: grid; gap: clamp(2.25rem, 4vw, 3rem); }
+.legal__body section { scroll-margin-top: 6rem; display: grid; gap: 0.9rem; }
+.legal__body h2 { font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.75rem); padding-bottom: 0.6rem; border-bottom: 1px solid var(--track-ink); }
+.legal__body p, .legal__body li { color: var(--ink-soft); }
+.legal__body strong { color: var(--ink); font-weight: 600; }
+.legal__body ul { display: grid; gap: 0.6rem; padding-left: 1.25rem; list-style: disc; }
+.legal__body li::marker { color: var(--gold-lo); }
+.legal__body a { color: var(--navy-700); text-decoration-color: var(--gold-lo); }
+.legal__body a:hover { color: var(--ink); }
+.footer__links a[aria-current="page"] { color: var(--gold); }
+
+@media (max-width: 860px) {
+  .legal { grid-template-columns: 1fr; }
+  .legal__toc { position: static; }
+  .legal__toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.25rem; }
+}
+@media (max-width: 640px) {
+  .legal__back { font-size: 0.875rem; }
+}
