@@ -171,7 +171,7 @@ A two-temperature palette: cool boardroom navy for authority, warm paper and bra
   - Final CTA: 770 / 370, with the button aligned to the end.
   - Topics: 2 equal columns. Stats and steps: 3 equal columns.
 - **Text measure:** section titles are capped at 770px, the About letter at 770px, and paragraphs at 68ch.
-- **Responsive:** at 767px and below, every grid collapses to one column, the stats stack with horizontal rules between them, and the primary button goes full width.
+- **Responsive:** from 768px to 1099px, each stat label sits below its figure. At 767px and below, every grid collapses to one column, the stats stack with horizontal rules between them, and the primary button goes full width.
 
 ## Elevation & Depth
 
@@ -207,6 +207,9 @@ A sand band with three figures in a row. Each is a large tabular Fraunces numera
 
 ### Photo
 Framed with 16px corners at a 4:5 aspect ratio and cropped with `object-fit: cover`. It shows the hero subject only and should never become a decorative stock image.
+
+### Browser Surfaces
+Headings use balanced wrapping and paragraphs use pretty wrapping. Text selection is navy with parchment text on light bands, and the reverse inside navy bands.
 
 ### Navigation
 There is no navigation menu. The header holds only the wordmark (200px wide, 160px on mobile) linking to the main content, and the secondary "Book a call" button.

@@ -79,6 +79,7 @@ h3 {
   font-family: var(--font-display);
   font-weight: 600;
   font-optical-sizing: auto;
+  text-wrap: balance;
 }
 
 h1 {
@@ -104,10 +105,23 @@ h3 {
 
 p {
   max-width: 68ch;
+  text-wrap: pretty;
 }
 
 a {
   color: inherit;
+}
+
+::selection {
+  background: var(--navy);
+  color: var(--parchment);
+}
+
+.site-header ::selection,
+.hero ::selection,
+.cta ::selection {
+  background: var(--parchment);
+  color: var(--navy);
 }
 
 :focus-visible {
@@ -513,6 +527,16 @@ a {
 
 .site-footer__bottom p:last-child {
   flex-shrink: 0;
+}
+
+/* Tablet: three stats no longer fit a label beside each figure,
+   so every label drops below its number instead of only some. */
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .stat {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* Mobile */
