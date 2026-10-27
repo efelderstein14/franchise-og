@@ -148,8 +148,7 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
 
 /* the small printed-caps voice */
 .wordmark,
-.track__num,
-.why__sign {
+.track__num {
   font-family: var(--print);
   font-size: 0.72rem;
   letter-spacing: 0.16em;
@@ -332,7 +331,7 @@ h3 { font-size: 1.2rem; font-stretch: 106%; letter-spacing: -0.01em; line-height
 }
 .why__grid--solo .why__body { max-width: none; justify-items: center; font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); }
 .why__grid--solo .why__body p { max-width: 54rem; text-wrap: balance; }
-.why__sign { color: var(--gold); font-size: 0.8rem; margin-top: 0.75rem; }
+.why__cta { margin-top: 1rem; }
 
 /* ---------- steps on the minute track ---------- */
 
