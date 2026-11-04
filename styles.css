@@ -622,6 +622,10 @@ html:has(.request[open]) { overflow: hidden; }
   background: oklch(0.95 0.03 25); color: oklch(0.42 0.15 25);
   font-size: 0.9375rem;
 }
+.consent-check { display: grid; grid-template-columns: auto 1fr; gap: 0.7rem; align-items: start; }
+.consent-check input { width: 1.25rem; height: 1.25rem; margin: 0.1rem 0 0; accent-color: var(--navy-700); cursor: pointer; }
+.consent-check input:focus-visible { outline: 3px solid oklch(0.80 0.115 82 / 0.8); outline-offset: 2px; }
+.consent-check label { font-size: 0.8125rem; line-height: 1.5; color: var(--ink-soft); cursor: pointer; }
 .request__consent { font-size: 0.8125rem; line-height: 1.5; color: var(--ink-soft); }
 .request__consent a { color: var(--navy-700); }
 

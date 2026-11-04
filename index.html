@@ -300,10 +300,15 @@
             <input id="rq-company" name="company" type="text" tabindex="-1" autocomplete="off">
           </div>
 
+          <div class="consent-check">
+            <input id="rq-sms" name="sms_consent" type="checkbox" value="yes">
+            <label for="rq-sms">Text me (optional). I agree to receive text messages from MFO Inc. (The Franchise OG) at the phone number above, including call scheduling and reminders, follow-ups about my request, and information about franchise brokering opportunities. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase.</label>
+          </div>
+
           <button class="pusher pusher--navy request__submit" type="submit">Request your free call</button>
           <p class="request__status" role="alert" hidden></p>
 
-          <p class="request__consent">By submitting, you agree that MFO Inc. and its affiliates may contact you by phone, email and text message at the details above about your request and franchise brokering opportunities. Consent is not a condition of any purchase. Message and data rates may apply; reply STOP to opt out. See our <a href="privacy.html">Privacy policy</a> and <a href="terms.html">Terms</a>.</p>
+          <p class="request__consent">By submitting, you agree that MFO Inc. may contact you by phone and email at the details above about your request and franchise brokering opportunities. We will only text you if you check the box above, and you can still request a call without it. See our <a href="privacy.html">Privacy policy</a> and <a href="terms.html">Terms</a>.</p>
         </form>
       </div>
 
@@ -382,6 +387,8 @@
         phone: form.elements.phone.value.trim(),
         email: form.elements.email.value.trim(),
         current_role: clean(form.elements.current_role.value),
+        sms_consent: form.elements.sms_consent.checked ? "yes" : "no",
+        sms_consent_text: form.elements.sms_consent.checked ? clean(form.querySelector('label[for="rq-sms"]').textContent) : "",
         source: "The Franchise OG website",
         page_url: location.href,
         utm_source: params.get("utm_source") || "",
