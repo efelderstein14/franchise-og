@@ -16,7 +16,7 @@ The Franchise OG offers a free 30-minute intro call, by phone only (no video), w
 
 ## Positioning
 
-The Franchise OG helped build the franchise brokerage space: over 25 years ago he launched one of the first franchise brokerages in the nation. A newer broker network or coach can teach the job; it cannot truthfully claim to have been there when the job was invented. The call is honest guidance, including telling people when brokering is not for them yet.
+The Franchise OG helped build the franchise brokerage space: over 25 years ago he helped launch one of the first franchise brokerages in the nation. A newer broker network or coach can teach the job; it cannot truthfully claim to have been there when the job was invented. The call is honest guidance, including telling people when brokering is not for them yet.
 
 ## Operating Context
 
@@ -39,7 +39,7 @@ Visitors land on a single page, usually on a phone, from a social post or a refe
 Facts that must stay consistent everywhere they appear:
 
 - 25+ years in franchising.
-- Launched one of the first franchise brokerages in the nation, over 25 years ago.
+- Helped launch one of the first franchise brokerages in the nation, over 25 years ago.
 - 1,500+ people matched with business opportunities.
 - 1,000+ brokers mentored.
 - Free 30-minute intro call, by phone, no obligation. Not a video call, and not self-scheduled.
