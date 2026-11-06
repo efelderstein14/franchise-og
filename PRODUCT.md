@@ -40,7 +40,7 @@ Facts that must stay consistent everywhere they appear:
 
 - 25+ years in franchising.
 - Launched one of the first franchise brokerages in the nation, over 25 years ago.
-- 500+ candidates placed.
+- 1,500+ people matched with business opportunities.
 - 1,000+ brokers mentored.
 - Free 30-minute intro call, by phone, no obligation. Not a video call, and not self-scheduled.
 
