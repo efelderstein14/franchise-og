@@ -296,8 +296,8 @@
             <p class="field__error" id="rq-role-error" hidden>Enter your current role.</p>
           </div>
           <div class="field field--trap" aria-hidden="true">
-            <label for="rq-company">Company</label>
-            <input id="rq-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            <label for="rq-hpx">Leave this field empty</label>
+            <input id="rq-hpx" name="hpx_check" type="text" tabindex="-1" autocomplete="one-time-code">
           </div>
 
           <div class="consent-check">
@@ -407,7 +407,8 @@
         doneView.focus();
       };
 
-      if (form.elements.company.value) { showDone(); return; } // a bot filled the hidden field
+      // A filled trap field usually means a bot. Still send it, flagged, so a real lead is never dropped.
+      payload.spam_check = form.elements.hpx_check.value ? "flagged" : "ok";
 
       submit.disabled = true;
       submit.textContent = "Sending\u2026";
