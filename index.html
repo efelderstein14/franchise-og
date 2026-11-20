@@ -329,7 +329,7 @@
     // LinkedIn lead conversion: paste the conversion ID from Campaign Manager
     // (Analyze > Conversion tracking > your "Lead" conversion, method "Event-specific").
     // Left empty, no conversion is sent.
-    const LINKEDIN_LEAD_CONVERSION_ID = "";
+    const LINKEDIN_LEAD_CONVERSION_ID = "30625060";
     const trackLinkedInLead = () => {
       if (!LINKEDIN_LEAD_CONVERSION_ID || typeof window.lintrk !== "function") return;
       try { window.lintrk("track", { conversion_id: Number(LINKEDIN_LEAD_CONVERSION_ID) }); } catch (_) {}
