@@ -326,6 +326,15 @@
     // Every [data-booking] button opens the request form; submissions are sent to this URL.
     const REQUEST_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/dVmgNgXVCJPMQwBu9OgU/webhook-trigger/ded3cf5e-1536-4471-889d-f4fb7a57a7da";
 
+    // LinkedIn lead conversion: paste the conversion ID from Campaign Manager
+    // (Analyze > Conversion tracking > your "Lead" conversion, method "Event-specific").
+    // Left empty, no conversion is sent.
+    const LINKEDIN_LEAD_CONVERSION_ID = "";
+    const trackLinkedInLead = () => {
+      if (!LINKEDIN_LEAD_CONVERSION_ID || typeof window.lintrk !== "function") return;
+      try { window.lintrk("track", { conversion_id: Number(LINKEDIN_LEAD_CONVERSION_ID) }); } catch (_) {}
+    };
+
     const dialog = document.getElementById("request");
     const form = document.getElementById("request-form");
     const formView = dialog.querySelector(".request__form-view");
@@ -415,6 +424,7 @@
       try {
         if (REQUEST_WEBHOOK_URL.includes("REPLACE-ME")) throw new Error("Webhook URL not set");
         await send(payload);
+        if (payload.spam_check === "ok") trackLinkedInLead();
         showDone();
       } catch (err) {
         status.textContent = "Your request didn\u2019t go through. Please try again, or email topfranchises@gmail.com and I will call you.";
